@@ -1,13 +1,14 @@
 {
   "showThemeCredit": true,
-  "name": "Hylia Starter Kit",
-  "shortDesc": "Hylia is a lightweight Eleventy starter kit to help you to create your own blog or personal website.",
-  "url": "https://hylia.website",
-  "authorEmail": "hi@piccalil.li",
-  "authorHandle": "@piccalilli_",
-  "authorName": "Andy Bell",
+  "name": "Solvefinity",
+  "shortDesc": "Infinite Solutions for Limitless Learning",
+  "url": "https://solvefinity-blog.netlify.app",
+  "authorEmail": "admin@solvefinity.com",
+  "authorHandle": "@solvefinity",
+  "authorName": "Solvefinity",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
-  "paymentPointer": "$ilp.uphold.com/MggmnFEyQqhk",
-  "faviconPath": "/images/favicon.png"
+  "paymentPointer": "",
+  "faviconPath": "/images/sf_favicon.ico"
 }
+

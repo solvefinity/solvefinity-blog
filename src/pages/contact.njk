@@ -1,0 +1,82 @@
+---
+title: Contact
+metaDesc: Get in touch about services, questions, or collaborations.
+permalink: /contact/
+layout: false
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main id="main-content">
+
+  <!-- HERO -->
+  <section class="hero hero--about">
+    <video autoplay muted loop playsinline class="hero-media">
+      <source src="/images/solvefinity-banner-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>We Can’t Wait To Hear From You!</h1>
+      <p>Curriculum Design • EdTech Consulting • Adaptive Tools for Real Classrooms</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="container" style="padding:2rem 0;">
+    <h2 class="underlined-heading">Contact</h2>
+    <p>Have a question? Interested in our services? Send a note and I’ll follow up.</p>
+
+    <form name="contact"
+          method="POST"
+          action="/thank-you/"
+          data-netlify="true"
+          netlify-honeypot="bot-field">
+      <!-- Netlify Forms: required hidden input -->
+      <input type="hidden" name="form-name" value="contact">
+      <!-- Honeypot -->
+      <p class="sr-only">
+        <label>Don’t fill this out: <input name="bot-field"></label>
+      </p>
+
+      <div class="form-row">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="org">School/District/Organization (optional)</label>
+        <input id="org" name="organization" type="text">
+      </div>
+
+      <div class="form-row">
+        <label for="services">Which category best fits your message?</label>
+        <select id="services" name="services" required>
+          <option value="">Select…</option>
+          <option>Questions</option>
+          <option>Feedback</option>
+          <option>Consulting Services</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Tell me a bit about your needs</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button class="button" type="submit">Send</button>
+      <p style="font-size:.9rem;color:var(--text-muted);margin-top:.5rem;">
+        By submitting, you consent to be contacted about your request. I’ll never share your info.
+      </p>
+    </form>
+  </section>
+
+</main>
+{% endblock %}
