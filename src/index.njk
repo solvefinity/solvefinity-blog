@@ -1,0 +1,117 @@
+---
+title: Home
+permalink: /
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main id="main-content">
+
+  <section class="hero">
+    <img src="/images/classroom-innovation.jpg" alt="Students working collaboratively" class="hero-media" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>SOLVEFINITY</h1>
+      <p>Infinite Solutions for Limitless Learning</p>
+      <a href="/services/" class="button">Learn More About Us</a>
+    </div>
+  </section>
+
+  <section class="who-we-are">
+    <div class="container">
+      <h2 class="underlined-heading">Who We Are</h2>
+      <p>Math education is evolving, and Solvefinity is here to help lead the way. We combine math instruction, data literacy, and adaptive technology to create tools and lessons that truly support teachers and students. Our mission is to make math more engaging, accessible, and effective for real classrooms.</p>
+    </div>
+  </section>
+
+  <section class="pillars">
+    <div class="container">
+      <h2 class="underlined-heading"><i class="ph ph-bank" aria-hidden="true" style="color:var(--bg-light)"></i> Our Pillars</h2>
+      <div class="card-grid">
+
+        <div class="pillar-card card-hover-effect">
+          <img src="/images/design-thinking.webp" alt="Students collaborating with robotics and coding tools">
+          <h3>Design Thinking</h3>
+          <p>Great problem solvers don’t just find answers — they build solutions creatively.</p>
+          <a href="#" class="button button-small" aria-label="Explore Design Thinking">Explore ➜</a>
+        </div>
+
+        <div class="pillar-card card-hover-effect">
+          <img src="/images/math-is-messy.webp" alt="Students working around a messy table of papers and sticky notes">
+          <h3>Math is Messy</h3>
+          <p>Real-world math isn’t neat, and that’s exactly how students learn to think flexibly.</p>
+          <a href="#" class="button button-small" aria-label="See Math is Messy in Action">See It in Action ➜</a>
+        </div>
+
+        <div class="pillar-card card-hover-effect">
+          <img src="/images/data-literacy.webp" alt="Teacher explaining data graphs to an engaged classroom">
+          <h3>Data Literacy</h3>
+          <p>Today’s learners turn information into insights — and ask smarter questions.</p>
+          <a href="#" class="button button-small" aria-label="Learn More About Data Literacy">Learn More ➜</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <div class="container blog-grid">
+      <div class="blog-intro">
+        <img src="/images/solvefinity-blog-insights.webp" alt="Glowing lightbulb over digital circuit background" class="blog-intro-header" />
+        <div class="blog-intro-text">
+          <h2 class="underlined-heading">Insights from the Blog</h2>
+          <p>Follow my journey as I navigate coding, data analytics, and adaptive technology—all with a teacher’s mindset. Learn alongside me as I explore how technology can make math more accessible and engaging.</p>
+          <a href="/blog/" class="button button-secondary">View All Posts</a>
+        </div>
+      </div>
+
+      <div class="pillar-card card-hover-effect">
+        <img src="/images/toilet-math-problem-solving.webp" alt="Man looking confused in front of toilets">
+        <h3>How a Toilet on Instagram Perfectly Captured What’s Wrong With Math Education</h3>
+        <p>A late-night scroll led me to a video of a man in a hardware store asking the world’s most unexpected math question...</p>
+        <a href="/blog/how-a-toilet/" class="button button-secondary">Read the Post ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-visual">
+    <div class="cta-container">
+      <div class="cta-image">
+        <img src="/images/services-buttons.webp" alt="Educators pointing to service options like Consulting and Adaptive Tech">
+      </div>
+      <div class="cta-content">
+        <h2 class="cta-heading">Let’s Work Together</h2>
+        <p class="cta-text">Every classroom, curriculum, and technology solution is unique. If you’re looking for expert insights on math education, instructional design, or EdTech development, let’s connect!</p>
+        <div class="cta-actions">
+          <a href="/services/" class="button">Explore Services</a>
+          <a href="/contact/" class="button button-ghost-white">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-section">
+    <div class="container two-column">
+      <div class="form-column">
+        <div class="ml-embedded" data-form="XYeqGG"></div>
+      </div>
+      <div class="teaser-column">
+        <h2 class="underlined-heading">Coming Soon to Solvefinity!</h2>
+        <ul>
+          <li>
+            <img src="/images/adaptive-tech-tools.webp" alt="Students using adaptive technology tools" class="teaser-image">
+            <strong>Adaptive Tech Tools:</strong><br>
+            Interactive supports designed for multilingual learners and students with disabilities.
+          </li>
+          <li>
+            <img src="/images/classroom-resources.webp" alt="Students collaborating on a math task" class="teaser-image">
+            <strong>Classroom Resources:</strong><br>
+            Downloadable math lessons with real-world modeling and accessibility features.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock %}

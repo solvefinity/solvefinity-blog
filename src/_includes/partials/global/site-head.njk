@@ -1,13 +1,41 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
-<header role="banner" class="[ site-head ] [ pad-top-700 pad-bottom-700 ">
-  <div class="wrapper">
-    <div class="[ site-head__inner ] [ md:box-flex space-between align-center ]">
-      <a href="/" class="[ site-head__site-name ] [ leading-tight ]">
-        <span class="visually-hidden">{{ site.name }} - Home</span>
-        <span class="[ site-head__site-name ] [ text-600 ]" aria-hidden="true">{{ site.name }}</span>
-      </a>
-      {% set ariaLabel = 'navigation' %}
-      {% include "partials/components/nav.njk" %}
-    </div>
+
+<header class="navbar">
+  <div class="logo-container">
+    <img src="/images/solvefinitylogo_final_wt.png" alt="Solvefinity Logo" class="logo" />
+    <span class="site-name">Solvefinity</span>
   </div>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">&#9776;</label>
+
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+<li>
+  <a href="/"
+     class="nav-link{% if page.url == '/' %} active{% endif %}"
+     {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+</li>
+
+<li>
+  <a href="/services/"
+     class="nav-link{% if page.url and page.url.startsWith('/services/') %} active{% endif %}"
+     {% if page.url and page.url.startsWith('/services/') %}aria-current="page"{% endif %}>Services</a>
+</li>
+
+<li>
+  <a href="/contact/"
+     class="nav-link{% if page.url and page.url.startsWith('/contact/') %} active{% endif %}"
+     {% if page.url and page.url.startsWith('/contact/') %}aria-current="page"{% endif %}>Contact</a>
+</li>
+
+<li>
+  <a href="/blog/"
+     class="nav-link{% if page.url and page.url.startsWith('/blog/') %} active{% endif %}"
+     {% if page.url and page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>Blog</a>
+</li>
+
+    </ul>
+  </nav>
 </header>
+

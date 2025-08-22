@@ -36,6 +36,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
 
+
   const now = new Date();
 
   // Custom collections
