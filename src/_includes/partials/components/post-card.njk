@@ -1,0 +1,27 @@
+{% from "macros/taxonomy.njk" import labelFor %}
+
+<article class="post-card">
+  <a class="post-card__media" href="{{ post.url }}">
+    {% if post.data.cover %}
+      <img src="{{ post.data.cover | url }}" alt="" loading="lazy">
+    {% endif %}
+  </a>
+
+  <div class="post-card__body">
+    {% if post.data.primaryCategory %}
+      <span class="post-card__pill">{{ labelFor(post.data.primaryCategory) }}</span>
+    {% endif %}
+
+    <h3 class="post-card__title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+
+    {% if post.data.summary %}
+      <p class="post-card__summary">{{ post.data.summary }}</p>
+    {% endif %}
+
+    <p class="post-card__meta">
+      <time datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
+    </p>
+  </div>
+</article>

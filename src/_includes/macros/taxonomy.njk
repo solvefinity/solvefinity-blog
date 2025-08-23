@@ -1,0 +1,5 @@
+{% macro labelFor(slug) -%}
+{%- for c in taxonomy.categories -%}
+  {%- if c.slug == slug -%}{{ c.label }}{%- endif -%}
+{%- endfor -%}
+{%- endmacro %}

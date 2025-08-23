@@ -42,15 +42,49 @@ collections:
     slug: "{{slug}}"
     preview_path: "posts/{{slug}}"
     create: true
+
+    # store post images in a blog-specific folder
+    media_folder: "src/images/blog"
+    public_folder: "/images/blog"
+
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "SEO Meta Title", name: "metaTitle", widget: "string", required: false}
-      - {label: "SEO Meta Description", name: "metaDesc", widget: "string", required: false}
-      - {label: "Social Image", name: "socialImage", widget: "image", required: false}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list", allow_add: true}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+
+      # optional SEO (uses your existing meta-info partial)
+      - { label: "SEO Meta Title", name: "metaTitle", widget: "string", required: false }
+      - { label: "SEO Meta Description", name: "metaDesc", widget: "string", required: false }
+
+      # new fields for our taxonomy/cards
+      - label: "Primary Category"
+        name: "primaryCategory"
+        widget: "select"
+        options:
+          - { label: "Math Education", value: "math-education" }
+          - { label: "Data Science & Modeling", value: "data-science-modeling" }
+          - { label: "Technology & AI", value: "technology-ai" }
+        default: "math-education"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options:
+          - math-education
+          - data-science-modeling
+          - technology-ai
+          - design-thinking
+          - resources
+          - dev-diary
+          - problem-based-learning
+        allow_add: true
+
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Cover image", name: "cover", widget: "image", required: false }
+
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - label: "Globals"
     name: "globals"
     files:
