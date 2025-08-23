@@ -1,10 +1,88 @@
 ---
-layout: layouts/base.njk
 title: Privacy Policy
+metaDesc: How Solvefinity handles contact form and newsletter info, cookies, and analytics.
 permalink: /privacy/
+layout: false
 ---
-{% block head %}<meta name="robots" content="noindex">{% endblock %}
-<main class="container" style="padding:2rem 0;">
-  <h1>Privacy Policy</h1>
-  <p>Full policy coming soon.</p>
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main id="main-content" class="container page-top-gap">
+  <div class="legal-copy">
+
+    <h1>Privacy Policy</h1>
+    <p><strong>Effective date:</strong> August 22, 2025<br>
+    <strong>Last updated:</strong> August 22, 2025</p>
+
+    <h2>Who we are</h2>
+    <p>Solvefinity (“we,” “us,” “our”) operates <strong>solvefinity.com</strong> and related subdomains (including our in-progress blog host). We are based in the United States, with primary operations in the State of Maryland (USA).</p>
+
+    <p> For privacy questions or requests, please use our <a href="/contact/">Contact page</a>.</p>
+
+    <h2>What we collect &amp; why</h2>
+    <h3>Information you provide</h3>
+    <ul>
+      <li><strong>Contact forms (Netlify Forms)</strong>: name, email, message — used to reply and provide requested services.</li>
+      <li><strong>Newsletter sign-up (MailerLite)</strong>: name, email — used to send updates. Unsubscribe anytime via the link in any email.</li>
+    </ul>
+
+    <h3>Automatic data</h3>
+    <ul>
+      <li><strong>Analytics (Google Analytics 4)</strong>: pages viewed, approximate location, device, referrers; uses first-party cookies. We use aggregated reports to improve the site.</li>
+      <li><strong>Hosting logs (Netlify)</strong>: IP address and user-agent may be logged for security and performance.</li>
+    </ul>
+
+    <h3>Embeds &amp; third-party assets</h3>
+    <p>Some pages load third-party assets (e.g., Google Fonts, icon CDNs, videos). Those providers may collect limited technical data under their own policies.</p>
+
+    <h2>Cookies</h2>
+    <ul>
+      <li><strong>Analytics cookies</strong> (GA4) measure site usage.</li>
+      <li><strong>MailerLite cookies</strong> (if/when enabled) support forms and email performance.</li>
+    </ul>
+    <p>We do not use advertising cookies. You can block cookies in your browser; Google also offers an Analytics opt-out extension.</p>
+
+    <h2>Legal bases (EEA/UK visitors)</h2>
+    <p>Where applicable, we rely on <strong>legitimate interests</strong> (operate/secure the site, measure usage, respond to messages) and <strong>consent</strong> (newsletter).</p>
+
+    <h2>What we don’t do</h2>
+    <ul>
+      <li>We <strong>don’t sell</strong> your personal data.</li>
+      <li>We <strong>don’t</strong> run user accounts or on-site comments at this time.</li>
+      <li>No behavioral ads.</li>
+    </ul>
+
+    <h2>Service providers</h2>
+    <ul>
+      <li><strong>Netlify</strong> (hosting, form handling)</li>
+      <li><strong>Google</strong> (Analytics, Fonts)</li>
+      <li><strong>MailerLite</strong> (newsletter)</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <ul>
+      <li><strong>Contact submissions</strong>: kept as long as needed to respond and manage requests, then deleted/archived (target: up to <strong>24 months</strong>).</li>
+      <li><strong>Newsletter data</strong>: kept until you unsubscribe or we remove it.</li>
+      <li><strong>Analytics</strong>: retained per GA4 settings (commonly <strong>14 months</strong>).</li>
+      <li><strong>Server logs</strong>: per Netlify’s policies.</li>
+    </ul>
+
+    <h2>International transfers</h2>
+    <p>Data may be processed in the U.S. or other countries by our providers. We use appropriate safeguards (e.g., standard contractual clauses) where required.</p>
+
+    <h2>Your rights</h2>
+    <p>Depending on your location, you may have rights to access, correct, delete, or restrict processing. Use the <a href="/contact/">Contact page</a> to reach us; we’ll respond within required timeframes.</p>
+
+    <h2>Security</h2>
+    <p>We use reasonable technical and organizational measures (HTTPS, reputable providers). No method is 100% secure.</p>
+
+    <h2>Children</h2>
+    <p>Not directed to children under 13 (or the age required by local law). We don’t knowingly collect personal data from children.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy. We’ll post a new “Last updated” date.</p>
+
+  </div>
 </main>
+{% endblock %}
