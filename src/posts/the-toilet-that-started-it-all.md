@@ -7,5 +7,6 @@ primaryCategory: math-education
 tags:
   - problem-based-learning
   - data-science-modeling
+cover: /images/blog/toilet-math-problem-solving.webp
 ---
 t﻿estk
