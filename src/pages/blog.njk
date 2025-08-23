@@ -1,0 +1,9 @@
+---
+title: Blog
+permalink: /blog/
+layout: layouts/page.njk
+---
+
+{% set postListHeading = 'All posts' %}
+{% set postListItems = collections.posts %}
+{% include "partials/components/post-list.njk" %}
