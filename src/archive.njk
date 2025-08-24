@@ -1,5 +1,6 @@
 ---
-title: Blog
+title: Blog Archive
+layout: false
 ---
 
 {% extends 'layouts/base.njk' %}
@@ -9,7 +10,10 @@ title: Blog
 
 {% block content %}
   <main id="main-content" tabindex="-1">
-    {% include "partials/components/intro.njk" %}
+    <section class="container pad-top-700 pad-bottom-300">
+  <h1 class="underlined-heading">Blog Archive</h1>
+  <p>A collection of insights and discussions.</p>
+</section>
     {# OLD: {% include "partials/components/post-list.njk" %} #}
     {% include "partials/components/post-grid.njk" %}
   </main>

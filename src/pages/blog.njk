@@ -1,9 +1,26 @@
 ---
 title: Blog
 permalink: /blog/
-layout: layouts/page.njk
+layout: false
 ---
+{% extends "layouts/base.njk" %}
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    <section class="blog-hero">
+      <div class="container">
+        <h1 class="underlined-heading">Blog</h1>
+        <p>Math education, modeling, and the tech that supports real classrooms.</p>
 
-{% set postListHeading = 'All posts' %}
-{% set postListItems = collections.posts %}
-{% include "partials/components/post-list.njk" %}
+        <div class="button-row" style="display:flex; gap:.5rem; flex-wrap:wrap;">
+          {% for c in taxonomy.categories %}
+            <a class="button button-secondary" href="/tags/{{ c.slug }}/">{{ c.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {# Show all posts below as a card grid #}
+    {% include "partials/components/post-grid.njk" %}
+  </main>
+{% endblock %}
+
