@@ -22,17 +22,25 @@ permalink: /tags/{{ tag }}/
 
 {% block content %}
   {# Compact hero to match /blog #}
-  <section class="hero hero--compact hero--image">
+<section class="hero hero--blog">
+  <picture>
+    <!-- Very wide / retina desktops -->
+    <source srcset="/images/blog-hero-2400x540.webp" media="(min-width: 1400px)">
+
+    <!-- Laptops / most desktops -->
+    <source srcset="/images/blog-hero-1600x360.webp" media="(min-width: 768px)">
+
+    <!-- Mobile fallback -->
     <img
+      src="/images/blog-hero-mobile-900x600.webp"
+      alt="Glowing lightbulb with an infinity filament over a tech background"
       class="hero-media"
-      src="/images/blog-hero-1600x360.webp"
-      srcset="/images/blog-hero-1600x360.webp 1600w, /images/blog-hero-2400x540.webp 2400w"
-      sizes="100vw"
-      alt=""
       loading="eager"
       decoding="async"
-    />
-    <div class="hero-overlay"></div>
+    >
+  </picture>
+
+  <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ tag }}</h1>
       <p>Posts in this topic</p>

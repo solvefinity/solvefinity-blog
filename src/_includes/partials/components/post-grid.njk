@@ -1,7 +1,9 @@
 <section class="post-grid pad-top-700 gap-bottom-900">
   <div class="inner-wrapper">
     <div class="post-grid__items">
-      {% for post in collections.posts | reverse %}
+      {# Use the provided list (e.g., tags.njk) or default to all posts #}
+      {% set list = posts or (collections.posts | reverse) %}
+      {% for post in list %}
         {% if post.date.getTime() <= global.now %}
           {% include "partials/components/post-card.njk" %}
         {% endif %}
@@ -9,4 +11,5 @@
     </div>
   </div>
 </section>
+
 

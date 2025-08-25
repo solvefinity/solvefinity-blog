@@ -1,15 +1,23 @@
-{% from "macros/taxonomy.njk" import labelFor %}
+{# src/_includes/partials/components/post-card.njk #}
 
 <article class="post-card">
   <a class="post-card__media" href="{{ post.url }}">
     {% if post.data.cover %}
-      <img src="{{ post.data.cover | url }}" alt="" loading="lazy">
+      <img src="{{ post.data.cover | url }}" alt="" loading="lazy" decoding="async">
     {% endif %}
   </a>
 
   <div class="post-card__body">
-    {% if post.data.primaryCategory %}
-      <span class="post-card__pill">{{ labelFor(post.data.primaryCategory) }}</span>
+    {# Work out a friendly category label, safely #}
+    {% set catSlug = post.data.primaryCategory or (post.data.tags and post.data.tags[0]) %}
+    {% if catSlug %}
+      {% set catMap = {
+        'math-education': 'Math Education',
+        'data-science-modeling': 'Data Science & Modeling',
+        'technology-ai': 'Technology & AI'
+      } %}
+      {% set catLabel = catMap[catSlug] or (catSlug | replace('-', ' ') | title) %}
+      <span class="post-card__pill">{{ catLabel }}</span>
     {% endif %}
 
     <h3 class="post-card__title">
@@ -25,3 +33,4 @@
     </p>
   </div>
 </article>
+
