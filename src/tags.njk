@@ -1,6 +1,6 @@
-
 ---
-# Build one page per tag (same as Hylia, just our layout)
+# Build one page per tag (same pagination as Hylia)
+title: Tag Archive
 pagination:
   data: collections
   size: 1
@@ -9,30 +9,42 @@ pagination:
     - all
     - nav
     - post
-permalink: /tags/{{ tag | slug }}/index.html
-layout: layouts/base.njk
-title: Posts filed under “{{ tag }}”
+    - posts
+    - tagList
+    - postFeed
+  addAllPagesToCollections: true
+# Your chips already link to /tags/<slug> like /tags/math-education/
+# so we keep the same permalink as Hylia:
+permalink: /tags/{{ tag }}/
 ---
 
-{# Compact hero to match Blog #}
-<section class="hero hero--compact hero--image">
-  <img
-    class="hero-media"
-    src="/images/blog-hero-1600x360.webp"
-    srcset="/images/blog-hero-1600x360.webp 1600w, /images/blog-hero-2400x540.webp 2400w"
-    sizes="100vw"
-    alt=""
-    loading="eager"
-    decoding="async"
-  />
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>{{ tag }}</h1>
-    <p>Posts in this topic</p>
-  </div>
-</section>
+{% extends "layouts/base.njk" %}
 
-<div class="wrapper">
-  {% set posts = collections[tag] | reverse %}
-  {% include "partials/components/post-grid.njk" %}
-</div>
+{% block content %}
+  {# Compact hero to match /blog #}
+  <section class="hero hero--compact hero--image">
+    <img
+      class="hero-media"
+      src="/images/blog-hero-1600x360.webp"
+      srcset="/images/blog-hero-1600x360.webp 1600w, /images/blog-hero-2400x540.webp 2400w"
+      sizes="100vw"
+      alt=""
+      loading="eager"
+      decoding="async"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ tag }}</h1>
+      <p>Posts in this topic</p>
+    </div>
+  </section>
+
+  <main id="main-content" tabindex="-1">
+    <div class="wrapper">
+      {# Use the same grid partial as /blog #}
+      {% set posts = collections[tag] | reverse %}
+      {% include "partials/components/post-grid.njk" %}
+    </div>
+  </main>
+{% endblock %}
+
