@@ -388,8 +388,6 @@ a {
 }
 
 
-
-
 /*=============================================================
   3. CONTENT
   =============================================================*/
@@ -1225,7 +1223,7 @@ a {
   line-height: 1;
   padding: .35rem .6rem;
   border-radius: 999px;
-  background: rgba(255,255,255,.14);
+  background: var(--accent-hover);
   margin-bottom: .5rem;
 }
 
@@ -1267,8 +1265,156 @@ a {
 }
 
 @media (min-width: 900px) {
-  .post-card__media img { height: 260px; }
+  .post-card__media img { 
+    height: 260px; }
 }
 
+/* --- POST PAGE ONLY --- */
+.post-hero {              /* text-only, slim hero */
+  min-height: 200px;
+}
 
+.hero-content--wide {     /* let post titles breathe a bit more */
+  max-width: 780px;
+}
 
+/* Cover image that sits in the article, not in the hero */
+.post-cover {
+  width: min(1100px, 92vw);
+  margin: 1.25rem auto 0 auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* (Optional) tighten the little pill + meta on dark backgrounds */
+.post-hero__pill {
+  display: inline-block;
+  background: var(--accent-primary);
+  color: var(--on-dark-strong, #fff);
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  margin-bottom: .5rem;
+}
+.post-hero__meta { color: var(--on-dark-body, #eef); opacity: .9; margin-top: .25rem; }
+
+/* Post header band (no image) */
+.post-header {
+  background: var(--color-theme-primary-shade);
+  color: #fff;
+  padding: clamp(1.25rem, 3vw, 2.25rem) 0;
+  /* space under the navbar; keep consistent with your other pages */
+  margin-top: 42px; /* matches your .hero default */
+}
+
+.post-header .inner-wrapper { max-width: 64rem; }
+
+.post-hero__pill {
+  display: inline-block;
+  background: rgba(255,255,255,.14);
+  color: var(--on-dark-strong, #fff);
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  margin-bottom: .5rem;
+}
+
+.post-title {
+  margin: .35rem 0 0;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+/* Solvefinity underline (reuse across sections) */
+.u-underline {
+  position: relative;
+}
+.u-underline::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-primary);
+  margin-top: .5rem;
+}
+
+.post-meta {
+  color: var(--text-heading, #e8eef6);
+  opacity: .95;
+  margin-top: .35rem;
+  font-size: 0.95rem;
+}
+
+/* Post body images keep inside the column */
+.post__body img { max-width: 100%; height: auto; display: block; }
+
+.post-hero__meta time {
+  color: var(--text-heading);
+  opacity: 0.8;   /* softens it a touch */
+}
+
+.post-hero__pill {
+  background: var(--accent-hover);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ------- Post footer tags ------- */
+.post-footer {
+  border-top: 1px solid var(--color-mid);
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.post-tags {
+  display: flex;
+  align-items: center;
+  gap: .75rem .75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.post-tags__label {
+  font-weight: 600;
+  color: var(--color-slate);
+  margin-right: .25rem;
+}
+
+.post-tags__list {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Chip style (matches your teal pill) */
+.chip {
+  display: inline-block;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform .06s ease, opacity .12s ease;
+}
+
+.chip--tag {
+  background: var(--color-theme-primary); /* your teal */
+  color: #fff;
+}
+
+.chip--tag:hover {
+  transform: translateY(-1px);
+  opacity: .9;
+}
