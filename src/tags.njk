@@ -1,5 +1,6 @@
+
 ---
-title: Tag Archive
+# Build one page per tag (same as Hylia, just our layout)
 pagination:
   data: collections
   size: 1
@@ -8,28 +9,30 @@ pagination:
     - all
     - nav
     - post
-    - posts
-    - tagList
-    - postFeed
-  addAllPagesToCollections: true
-permalink: /tags/{{ tag }}/
+permalink: /tags/{{ tag | slug }}/index.html
+layout: layouts/base.njk
+title: Posts filed under “{{ tag }}”
 ---
 
-{% extends 'layouts/base.njk' %}
+{# Compact hero to match Blog #}
+<section class="hero hero--compact hero--image">
+  <img
+    class="hero-media"
+    src="/images/blog-hero-1600x360.webp"
+    srcset="/images/blog-hero-1600x360.webp 1600w, /images/blog-hero-2400x540.webp 2400w"
+    sizes="100vw"
+    alt=""
+    loading="eager"
+    decoding="async"
+  />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>{{ tag }}</h1>
+    <p>Posts in this topic</p>
+  </div>
+</section>
 
-{# Intro content #}
-{% set introHeading %}Posts filed under “{{ tag }}”{% endset %}
-{% set introHeadingLevel = '2' %}
-
-{# Post list content #}
-{% set postListHeadingLevel = '2' %}
-{% set postListHeading = 'Posts' %}
-{% set postListItems = collections[tag] %}
-
-{% block content %}
-  <main id="main-content" tabindex="-1">
-    {% include "partials/components/intro.njk" %}
-    {% include "partials/components/post-list.njk" %}
-    {% include "partials/components/pagination.njk" %}
-  </main>
-{% endblock %}
+<div class="wrapper">
+  {% set posts = collections[tag] | reverse %}
+  {% include "partials/components/post-grid.njk" %}
+</div>

@@ -3,6 +3,7 @@ title: A post with code samples
 date: 2019-06-18
 primaryCategory: math-education
 tags:
+  - math-education
   - data-science-modeling
 summary: here is a summary
 cover: /images/blog/data-literacy.webp
