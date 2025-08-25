@@ -1270,9 +1270,5 @@ a {
   .post-card__media img { height: 260px; }
 }
 
-/* Center a lone card on tag pages */
-.post-grid__items:has(> *:only-child) {
-  max-width: 780px;
-  margin-inline: auto;
-}
+
 
