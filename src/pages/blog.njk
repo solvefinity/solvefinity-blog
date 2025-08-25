@@ -1,26 +1,105 @@
 ---
 title: Blog
-permalink: /blog/
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 layout: false
+pagination:
+  data: collections.posts
+  size: 9           # 9 cards per page (adjust if you want)
+  alias: posts
+  reverse: true     # newest first
 ---
+
 {% extends "layouts/base.njk" %}
+
 {% block content %}
-  <main id="main-content" tabindex="-1">
-    <section class="blog-hero">
-      <div class="container">
-        <h1 class="underlined-heading">Blog</h1>
-        <p>Math education, modeling, and the tech that supports real classrooms.</p>
+<main id="main-content" tabindex="-1">
 
-        <div class="button-row" style="display:flex; gap:.5rem; flex-wrap:wrap;">
-          {% for c in taxonomy.categories %}
-            <a class="button button-secondary" href="/tags/{{ c.slug }}/">{{ c.label }}</a>
-          {% endfor %}
-        </div>
+<section class="hero hero--blog">
+  <picture>
+    <!-- Very wide / retina desktops -->
+    <source srcset="/images/blog-hero-2400x540.webp" media="(min-width: 1400px)">
+
+    <!-- Laptops / most desktops -->
+    <source srcset="/images/blog-hero-1600x360.webp" media="(min-width: 768px)">
+
+    <!-- Mobile fallback -->
+    <img
+      src="/images/blog-hero-mobile-900x600.webp"
+      alt="Glowing lightbulb with an infinity filament over a tech background"
+      class="hero-media"
+      loading="eager"
+      decoding="async"
+    >
+  </picture>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Blog</h1>
+    <p class="hero-tagline">Insights and innovation for real classrooms.</p>
+  </div>
+</section>
+
+
+  <!-- Chips bar -->
+  <section class="chips-bar" aria-label="Explore by topic">
+    <div class="inner-wrapper" style="display:flex; gap:.75rem; align-items:center; flex-wrap:wrap;">
+      <span class="chips-leadin">Explore by topic:</span>
+
+      <div class="button-row chips-row">
+        <!-- "All" just jumps to the grid -->
+        <a class="button button-secondary" href="/blog/#posts">All</a>
+
+        {% for c in taxonomy.categories %}
+          <a class="button" href="/tags/{{ c.slug }}/" aria-label="View posts in {{ c.label }}">{{ c.label }}</a>
+        {% endfor %}
       </div>
-    </section>
+    </div>
+  </section>
 
-    {# Show all posts below as a card grid #}
-    {% include "partials/components/post-grid.njk" %}
-  </main>
+  <!-- Card grid (all posts) -->
+  <section id="posts" class="post-grid pad-top-500 pad-bottom-700">
+    <div class="inner-wrapper">
+      <ol class="post-grid__items">
+        {% for item in posts %}
+          {% if item.date.getTime() <= global.now %}
+            <li class="post-card">
+              {% if item.data.cover %}
+                <a class="post-card__media" href="{{ item.url }}">
+                  <img src="{{ item.data.cover }}" alt="" loading="lazy">
+                </a>
+              {% endif %}
+
+              <div class="post-card__body">
+                {% if item.data.primaryCategory %}
+                  <span class="post-card__pill">
+                    {% for c in taxonomy.categories %}{% if c.slug == item.data.primaryCategory %}{{ c.label }}{% endif %}{% endfor %}
+                  </span>
+                {% endif %}
+
+                <h3 class="post-card__title">
+                  <a href="{{ item.url }}">{{ item.data.title }}</a>
+                </h3>
+
+                {% if item.data.summary %}
+                  <p class="post-card__summary">{{ item.data.summary }}</p>
+                {% endif %}
+
+                <p class="post-card__meta">
+                  <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+                  · {{ helpers.getReadingTime(item.templateContent) }} min read
+                </p>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+
+      {% include "partials/components/pagination.njk" %}
+    </div>
+  </section>
+
+</main>
 {% endblock %}
+
 
