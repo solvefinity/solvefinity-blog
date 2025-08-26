@@ -147,6 +147,7 @@ textarea:focus {
   --bg-text: #D3E5E8;
   --bg-lt-gray: #E1E2E5;
   --bg-lt-gray2: #979FA9;
+  --bg-md-gray: #e4e7ec;
   --on-dark: #ffffff;
   --on-dark-strong: #ffffff;              /* headings, icons */
   --on-dark-body: rgba(255,255,255,.92);  /* paragraph/bullets */
@@ -1471,3 +1472,47 @@ a {
   margin-left: 0;
   transform: none;
 }
+
+/* Post footer container */
+.post-footer {
+  margin-top: 2.5rem;
+}
+
+/* Light gray CTA band inside footer */
+.post-footer__cta {
+  background: var(--bg-lt-gray); /* #E1E2E5 */
+  padding: 3rem 1rem;
+}
+
+/* Two-column on desktop, stacked on mobile */
+.post-footer__grid {
+  display: grid;
+  gap: 2rem;
+  text-align: center; /* mobile */
+}
+@media (min-width: 768px) {
+  .post-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+/* Spacing for meta block under the band */
+.post-footer__meta-wrap {
+  padding: 1.25rem 1rem 2rem;
+}
+
+/* Existing tags styles (keep yours) */
+.post-tags {
+  display: flex;
+  align-items: center;
+  gap: .75rem .75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.post-tags__label { font-weight: 600; color: var(--color-slate); margin-right: .25rem; }
+.post-tags__list { display: flex; gap: .5rem; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
+
+.chip { display: inline-block; padding: .3rem .7rem; border-radius: 999px; font-size: .9rem; line-height: 1; text-decoration: none; transition: transform .06s ease, opacity .12s ease; }
+.chip--tag { background: var(--color-theme-primary); color: #fff; }
+.chip--tag:hover { transform: translateY(-1px); opacity: .9; }

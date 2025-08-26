@@ -31,33 +31,65 @@
       {{ content | safe }}
     </div>
 
-<footer class="post-footer">
-
-    {% if primaryCategory %}
-  <p class="post-footer__meta">
-    Posted under <a href="/tags/{{ primaryCategory }}/">{{ primaryCategory | replace('-', ' ') | title }}</a>
-  </p>
-{% endif %}
-  {% if tags and tags.length %}
-    <div class="post-tags">
-      <span class="post-tags__label">Tags:</span>
-      <ul class="post-tags__list" role="list">
-        {% for t in tags %}
-          {% if not primaryCategory or t != primaryCategory %}
-            {% set label = t | replace('-', ' ') | title %}
-            <li>
-              <a class="chip chip--tag" href="/tags/{{ t }}/" aria-label="View posts tagged {{ label }}">
-                {{ label }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-</footer>
 
   </article>
 </main>
+
+  </article>
+</main>
+
+<footer class="post-footer">
+  {# CTA band (light gray) #}
+  <section class="post-footer__cta">
+    <div class="inner-wrapper post-footer__grid">
+      <div class="subscribe">
+        <h3 class="u-underline">Get updates</h3>
+        <p>Be first to know when new lessons and posts go live.</p>
+        <div class="ml-embedded" data-form="XYeqGG"></div>
+      </div>
+
+      <div class="social-cta">
+        <h3 class="u-underline">Continue the conversation</h3>
+        <p>What’s your take? Share your thoughts or start a discussion:</p>
+        <p>
+          <a class="button"
+             href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ site.url }}{{ page.url }}"
+             target="_blank" rel="noopener">Discuss on X</a>
+             <p></p>
+          <a class="button"
+             href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+             target="_blank" rel="noopener">Share on LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {# Meta: Posted under + Tags (left-aligned under the band) #}
+  <div class="inner-wrapper post-footer__meta-wrap">
+    {% if primaryCategory %}
+      <p class="post-footer__meta">
+        Posted under <a href="/tags/{{ primaryCategory }}/">{{ primaryCategory | replace('-', ' ') | title }}</a>
+      </p>
+    {% endif %}
+
+    {% if tags and tags.length %}
+      <div class="post-tags">
+        <span class="post-tags__label">Tags:</span>
+        <ul class="post-tags__list" role="list">
+          {% for t in tags %}
+            {% if not primaryCategory or t != primaryCategory %}
+              {% set label = t | replace('-', ' ') | title %}
+              <li>
+                <a class="chip chip--tag" href="/tags/{{ t }}/" aria-label="View posts tagged {{ label }}">
+                  {{ label }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</footer>
 
 {% endblock %}

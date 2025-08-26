@@ -95,7 +95,7 @@ I’m teaching myself Python. I’m learning how AI systems give feedback. I’m
 <div class="split">
   <div class="media">
     <img src="/images/blog/Toiletlesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
-    
+
   </div>
   <div>
     <h3>COMING SOON: THE TOILET LESSON</h3>
@@ -103,31 +103,3 @@ I’m teaching myself Python. I’m learning how AI systems give feedback. I’m
     <p>Yes, I even found a video where someone tests golf balls, billiard balls, and a rotisserie chicken. I’ll share a full lesson plan on the Resources page soon.</p>
   </div>
 </div>
-
-- - -
-
-<!-- SUBSCRIBE (drop your MailerLite embed below) -->
-
-<section class="subscribe pad-top-700 pad-bottom-700">
-  <h3 class="u-underline">Get updates</h3>
-  <p>New posts, classroom resources, and lesson releases.</p>
-
-  <!-- Paste your MailerLite/ESP embed here -->
-
-  <!-- Example placeholder: -->
-
-  <div id="newsletter-embed">
-<div class="ml-embedded" data-form="XYeqGG"></div>
-  </div>
-</section>
-
-<!-- SOCIAL CTA -->
-
-<section class="post-cta pad-top-700 pad-bottom-900">
-  <h3 class="u-underline">Continue the conversation</h3>
-  <p>What would you measure in the toilet challenge? Join the discussion and share your take.</p>
-  <p>
-    <a class="button" href="https://twitter.com/intent/tweet?text=Real%20math%20is%20messy.%20Here%E2%80%99s%20why…&url=https://solvefinity.com/posts/toilet-story/" target="_blank" rel="noopener">Discuss on X</a>
-    <a class="button" href="https://www.linkedin.com/in/<your-handle>/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-  </p>
-</section>
