@@ -1418,3 +1418,56 @@ a {
   transform: translateY(-1px);
   opacity: .9;
 }
+
+/* ========= Post layout helpers ========= */
+
+/* Two-column media/text split */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: start;
+  margin: 1rem 0;
+}
+
+/* Make images behave inside the media column */
+.split .media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* Reverse variant: text first, image second */
+.split.reverse {
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Mobile: stack to single column */
+@media (max-width: 800px) {
+  .split,
+  .split.reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Optional: floated quote look when you place <blockquote> inside .media */
+.split .media blockquote {
+  margin: .75rem 0 0;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  border-left: .3rem solid var(--color-theme-primary-glare);
+  padding-left: .9rem;
+  font-style: italic;
+  opacity: .95;
+}
+
+/* Inside split layouts, kill full-bleed behavior */
+.split figure,
+.split .video-player,
+.split video {
+  width: auto;
+  max-width: 100%;
+  margin-left: 0;
+  transform: none;
+}

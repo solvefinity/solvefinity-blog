@@ -16,6 +16,8 @@ summary: "A funny toilet video sparked a serious idea: real math is messy. Why
   open-ended, uncertain problems build student agency—and why math education
   needs to embrace the mess."
 cover: /images/blog/toilet-math-problem-solving.webp
+permalink: /posts/toilet-story/
+
 ---
 <div class="split">
   <div class="media">
@@ -92,11 +94,8 @@ I’m teaching myself Python. I’m learning how AI systems give feedback. I’m
 
 <div class="split">
   <div class="media">
-    <img src="/images/blog/toilet-lesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
-
-![phoenix trial](/images/blog/1backphoenixclose.png)
-
-
+    <img src="/images/blog/Toiletlesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
+    
   </div>
   <div>
     <h3>COMING SOON: THE TOILET LESSON</h3>
