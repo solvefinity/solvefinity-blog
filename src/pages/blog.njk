@@ -63,7 +63,7 @@ pagination:
       <ol class="post-grid__items">
         {% for item in posts %}
           {% if item.date.getTime() <= global.now %}
-            <li class="post-card">
+            <li class="post-card card-hover-effect">
               {% if item.data.cover %}
                 <a class="post-card__media" href="{{ item.url }}">
                   <img src="{{ item.data.cover }}" alt="" loading="lazy">
