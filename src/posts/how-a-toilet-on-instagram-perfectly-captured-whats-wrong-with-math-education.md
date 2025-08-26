@@ -44,4 +44,80 @@ It’s funny at first. But the more I thought about it, the more I realized: thi
   </div>
 </div>
 
-<﻿h3>EMBRACE THE MESS</h3>
+### EMBRACE THE MESS
+
+In school, math problems are often perfectly structured, with one clear solution path and all the information laid out. We teach students to identify the type of problem, recall the steps, and execute them quickly. And when they don’t get it right away, we worry. We reteach. We slow down.
+
+But real math doesn’t work like that.
+
+Real math is messy. It’s full of false starts, missing information, estimation, compromise, and reasoning. It requires flexibility, curiosity, and the confidence to wrestle with ambiguity. Yet for too many students, math class becomes a race toward speed and precision—two things computers can already do better than us.
+
+If we don’t rethink what it means to be “good at math,” we risk preparing students for a past that no longer exists.
+
+This wasn’t a new realization for me. I’ve spent years reflecting on the disconnect between the way math is taught and the way math actually works in the world. What that Instagram video gave me was a funny, tangible way to explain it—a clear picture of the kind of uncertainty and modeling we rarely invite into the classroom.
+
+Around the same time, I was taking a professional learning course on social-emotional learning (SEL) for recertification. That’s when I was introduced to design thinking—and again, it didn’t feel brand-new. It felt like language for the kind of teaching I’d been working toward all along.
+
+<!-- DESIGN THINKING (image on the right) -->
+<div class="split reverse">
+  <div>
+    <h3>DESIGN THINKING</h3>
+    <p>Design thinking emphasizes:</p>
+    <ul>
+      <li>Identifying real problems</li>
+      <li>Testing and refining ideas</li>
+      <li>Designing with empathy and adaptability</li>
+    </ul>
+    <p>It’s exactly how students should engage with math. It’s how we should be designing lessons, resources, and educational technology.</p>
+  </div>
+  <div class="media">
+    <img src="/images/blog/student-stem-design-768x768.webp" alt="A student building a small structure with sticks">
+  </div>
+</div>
+
+### BLENDING MATH, TECHNOLOGY, AND DESIGN THINKING
+
+Solvefinity was born out of that question. It’s where my years of math coaching, curriculum work, and passion for inclusive education intersect with my growing interest in data science, AI, and design.
+
+I want to build tools that:
+- Help students explore math dynamically—with interactive models, simulations, and visual supports  
+- Provide adaptive scaffolding that supports thinking (not shortcuts to answers)  
+- Empower teachers to differentiate in real time without overwhelming prep  
+
+I’m teaching myself Python. I’m learning how AI systems give feedback. I’m experimenting with platforms like OATutor. I’m not an expert—yet—but I’m deeply motivated to design tools that reflect how learning really happens.
+
+<!-- FINAL SECTION (image on the left) -->
+<div class="split">
+  <div class="media">
+    <img src="/images/blog/toilet-lesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
+  </div>
+  <div>
+    <h3>COMING SOON: THE TOILET LESSON</h3>
+    <p>That Instagram video sparked a lesson idea. What data would we need to decide which toilet is “better”? What assumptions are we making? What matters more—volume, force, shape?</p>
+    <p>Yes, I even found a video where someone tests golf balls, billiard balls, and a rotisserie chicken. I’ll share a full lesson plan on the Resources page soon.</p>
+  </div>
+</div>
+
+---
+
+<!-- SUBSCRIBE (drop your MailerLite embed below) -->
+<section class="subscribe pad-top-700 pad-bottom-700">
+  <h3 class="u-underline">Get updates</h3>
+  <p>New posts, classroom resources, and lesson releases.</p>
+
+  <!-- Paste your MailerLite/ESP embed here -->
+  <!-- Example placeholder: -->
+  <div id="newsletter-embed">
+<div class="ml-embedded" data-form="XYeqGG"></div>
+  </div>
+</section>
+
+<!-- SOCIAL CTA -->
+<section class="post-cta pad-top-700 pad-bottom-900">
+  <h3 class="u-underline">Continue the conversation</h3>
+  <p>What would you measure in the toilet challenge? Join the discussion and share your take.</p>
+  <p>
+    <a class="button" href="https://twitter.com/intent/tweet?text=Real%20math%20is%20messy.%20Here%E2%80%99s%20why…&url=https://solvefinity.com/posts/toilet-story/" target="_blank" rel="noopener">Discuss on X</a>
+    <a class="button" href="https://www.linkedin.com/in/<your-handle>/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </p>
+</section>
