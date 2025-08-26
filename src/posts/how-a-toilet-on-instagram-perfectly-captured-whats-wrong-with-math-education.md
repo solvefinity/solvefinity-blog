@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: How a Toilet on Instagram Perfectly Captured What's Wrong with Math Education
-date: 2025-08-26T00:28:37.218Z
+date: 2025-06-03T00:28:37.218Z
 metaTitle: "Why Math Is Messy: Rethinking Math Education"
 metaDesc: A viral toilet video shows why real math is messy—and why students
   need open-ended problems, design thinking, and adaptive tools for the future
@@ -59,6 +59,7 @@ This wasn’t a new realization for me. I’ve spent years reflecting on the dis
 Around the same time, I was taking a professional learning course on social-emotional learning (SEL) for recertification. That’s when I was introduced to design thinking—and again, it didn’t feel brand-new. It felt like language for the kind of teaching I’d been working toward all along.
 
 <!-- DESIGN THINKING (image on the right) -->
+
 <div class="split reverse">
   <div>
     <h3>DESIGN THINKING</h3>
@@ -80,16 +81,22 @@ Around the same time, I was taking a professional learning course on social-emot
 Solvefinity was born out of that question. It’s where my years of math coaching, curriculum work, and passion for inclusive education intersect with my growing interest in data science, AI, and design.
 
 I want to build tools that:
-- Help students explore math dynamically—with interactive models, simulations, and visual supports  
-- Provide adaptive scaffolding that supports thinking (not shortcuts to answers)  
-- Empower teachers to differentiate in real time without overwhelming prep  
+
+* Help students explore math dynamically—with interactive models, simulations, and visual supports  
+* Provide adaptive scaffolding that supports thinking (not shortcuts to answers)  
+* Empower teachers to differentiate in real time without overwhelming prep  
 
 I’m teaching myself Python. I’m learning how AI systems give feedback. I’m experimenting with platforms like OATutor. I’m not an expert—yet—but I’m deeply motivated to design tools that reflect how learning really happens.
 
 <!-- FINAL SECTION (image on the left) -->
+
 <div class="split">
   <div class="media">
     <img src="/images/blog/toilet-lesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
+
+![phoenix trial](/images/blog/1backphoenixclose.png)
+
+
   </div>
   <div>
     <h3>COMING SOON: THE TOILET LESSON</h3>
@@ -98,21 +105,25 @@ I’m teaching myself Python. I’m learning how AI systems give feedback. I’m
   </div>
 </div>
 
----
+- - -
 
 <!-- SUBSCRIBE (drop your MailerLite embed below) -->
+
 <section class="subscribe pad-top-700 pad-bottom-700">
   <h3 class="u-underline">Get updates</h3>
   <p>New posts, classroom resources, and lesson releases.</p>
 
   <!-- Paste your MailerLite/ESP embed here -->
+
   <!-- Example placeholder: -->
+
   <div id="newsletter-embed">
 <div class="ml-embedded" data-form="XYeqGG"></div>
   </div>
 </section>
 
 <!-- SOCIAL CTA -->
+
 <section class="post-cta pad-top-700 pad-bottom-900">
   <h3 class="u-underline">Continue the conversation</h3>
   <p>What would you measure in the toilet challenge? Join the discussion and share your take.</p>
