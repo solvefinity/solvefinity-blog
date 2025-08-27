@@ -12,15 +12,13 @@ cover: /images/math-is-messy.webp   # reuse the homepage card image
 permalink: /posts/math-is-messy/
 ---
 
-<div class="split forty">
-  <div class="media">
+  <div class="featured-image">
     <img src="/images/math-is-messy.webp" alt="Students collaborating at a table with scattered books and papers">
   </div>
   <div>
     <h3>Why “messy” matters</h3>
     <p>For too long, we’ve treated math like it should always be neat, step-by-step, predictable, and efficient. But real math? Real math is messy. It involves uncertainty, iteration, and judgment. You try a path, learn something from it, and adjust.</p>
     <p>When students only see polished final answers, they miss the thinking that got us there - the scratch work, the dead ends, the “wait… does this even make sense?” moments that are <em>actually</em> the work of mathematics.  </p>
-  </div>
 </div>
 
 ### What students really need to see

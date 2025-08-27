@@ -1436,6 +1436,7 @@ a.button:visited {
 /* Base split: 2+ column grid */
 .split {
   display: grid;
+    grid-template-columns: var(--cols, 1fr 2fr); /* fallback = 1/3–2/3 */
   gap: 1rem;
   align-items: start;
   margin: 1rem 0;
@@ -1661,4 +1662,34 @@ a.button:visited {
   }
 }
 
+/* Column Flow */
+.text-cols-2 { column-count: 2; column-gap: 1.5rem; column-fill: balance; }
+.text-cols-3 { column-count: 3; column-gap: 1.5rem; column-fill: balance; }
+.text-cols-2 > *, .text-cols-3 > * { break-inside: avoid; }
+@media (max-width: 800px) { .text-cols-2, .text-cols-3 { column-count: 1; } }
+
+.spacer    { margin: 2rem 0; }
+.spacer-sm { margin: 1rem 0; }
+.spacer-lg { margin: 3rem 0; }
+
+/* Cards if needed later
+
+.cards { display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+*/
+/* Center standalone featured images, independent of parent layout */
+.featured-image {
+  display: grid;            /* isolates from flex/text-align quirks */
+  place-items: center;      /* centers both axes */
+  margin: 1rem 0;
+}
+
+.featured-image img {
+  max-width: 800px;         /* adjust to taste */
+  width: 100%;
+  height: auto;
+  float: none;              /* neutralize any float utilities */
+  display: block;           /* make margin/padding predictable */
+}
 
