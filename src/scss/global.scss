@@ -1429,17 +1429,35 @@ a.button:visited {
 }
 
 /* ========= Post layout helpers ========= */
+/* ===========================
+   Flexible Split Layouts
+   =========================== */
 
-/* Two-column media/text split */
+/* Base split: 2+ column grid */
 .split {
   display: grid;
-  grid-template-columns: 1fr 2fr;
   gap: 1rem;
   align-items: start;
   margin: 1rem 0;
 }
 
-/* Make images behave inside the media column */
+/* Common ratios (apply as needed) */
+.split.fifty { grid-template-columns: 1fr 1fr; }        /* 50/50 */
+.split.forty { grid-template-columns: 2fr 3fr; }        /* ~40/60 */
+.split.sixty { grid-template-columns: 3fr 2fr; }        /* ~60/40 */
+.split.three { grid-template-columns: 1fr 1fr 1fr; }    /* 3 equal columns */
+
+/* Reverse order (works with ANY ratio above) */
+.split.reverse > *:first-child { grid-column: 2; }
+.split.reverse > *:last-child  { grid-column: 1; }
+
+/* Mobile: stack all splits to 1 column */
+@media (max-width: 800px) {
+  .split { grid-template-columns: 1fr; }
+  .split.reverse > * { grid-column: auto; } /* reset order */
+}
+
+/* Media column helper (images, video, figures inside split) */
 .split .media img {
   width: 100%;
   height: auto;
@@ -1447,20 +1465,7 @@ a.button:visited {
   border-radius: 0.5rem;
 }
 
-/* Reverse variant: text first, image second */
-.split.reverse {
-  grid-template-columns: 2fr 1fr;
-}
-
-/* Mobile: stack to single column */
-@media (max-width: 800px) {
-  .split,
-  .split.reverse {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Optional: floated quote look when you place <blockquote> inside .media */
+/* Optional: styled blockquotes inside split */
 .split .media blockquote {
   margin: .75rem 0 0;
   font-size: 1.15rem;
@@ -1471,7 +1476,7 @@ a.button:visited {
   opacity: .95;
 }
 
-/* Inside split layouts, kill full-bleed behavior */
+/* Prevent full-bleed for figures/videos inside split */
 .split figure,
 .split .video-player,
 .split video {
@@ -1480,6 +1485,39 @@ a.button:visited {
   margin-left: 0;
   transform: none;
 }
+
+
+/* ===========================
+   Multi-Column Flow (Newspaper Style)
+   =========================== */
+
+/* Flows ONE continuous block of text into columns */
+.text-cols-2 {
+  column-count: 2;
+  column-gap: 1.5rem;
+  column-fill: balance;
+}
+
+.text-cols-3 {
+  column-count: 3;
+  column-gap: 1.5rem;
+  column-fill: balance;
+}
+
+/* Prevent elements from splitting awkwardly */
+.text-cols-2 > *,
+.text-cols-3 > * {
+  break-inside: avoid;
+}
+
+/* Mobile: always stack back to 1 column */
+@media (max-width: 800px) {
+  .text-cols-2,
+  .text-cols-3 {
+    column-count: 1;
+  }
+}
+
 
 /* Post footer container */
 .post-footer {
@@ -1545,3 +1583,82 @@ a.button:visited {
   padding: 4rem 0 5rem;
   color: var(--on-dark); /* keep text readable */
 }
+
+/* Normalize list text size */
+.post__body ul,
+.post__body ol {
+  font-size: 1rem;          /* matches body text */
+  line-height: 1.6;         /* same rhythm as paragraphs */
+  margin-left: 1.25rem;     /* indentation */
+  margin-bottom: 1.5rem;    /* spacing after list */
+}
+
+.post__body li {
+  margin-bottom: 0.5rem;    /* a little breathing room */
+}
+
+.post__body ul {
+  list-style: disc outside;
+}
+
+.post__body li::marker {
+  color: var(--accent-primary);
+}
+
+.post__body img {
+  max-width: 100%;   /* already likely there */
+  border-radius: 8px;
+}
+
+/* Specific to side-by-side (split) layouts */
+.split img {
+  max-width: 450px;  /* increase from 300px-ish */
+}
+
+/* Wrapping layouts  */
+.img-wide-left {
+  float: left;
+  width: min(60%, 36rem);
+  margin: 0.25rem 1rem 1rem 0;
+  border-radius: 0.5rem;
+}
+.img-wide-right {
+  float: right;
+  width: min(60%, 36rem);
+  margin: 0.25rem 0 1rem 1rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .img-wide-left, .img-wide-right {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Utilities: floated images with text wrap */
+.img-left {
+  float: left;
+  width: min(40%, 22rem);
+  margin: 0.25rem 2rem 0.5rem 0;  /* top right bottom left */
+  border-radius: 0.5rem;
+}
+.img-right {
+  float: right;
+  width: min(40%, 22rem);
+  margin: 0.25rem 0 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+/* Mobile: stack (no float) */
+@media (max-width: 700px) {
+  .img-left, .img-right {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+

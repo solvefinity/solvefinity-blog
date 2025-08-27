@@ -92,14 +92,11 @@ I’m teaching myself Python. I’m learning how AI systems give feedback. I’m
 
 <!-- FINAL SECTION (image on the left) -->
 
-<div class="split">
-  <div class="media">
+<div class="media">
     <img src="/images/blog/Toiletlesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
-
   </div>
-  <div>
+<div>
     <h3>COMING SOON: THE TOILET LESSON</h3>
     <p>That Instagram video sparked a lesson idea. What data would we need to decide which toilet is “better”? What assumptions are we making? What matters more—volume, force, shape?</p>
     <p>Yes, I even found a video where someone tests golf balls, billiard balls, and a rotisserie chicken. I’ll share a full lesson plan on the Resources page soon.</p>
-  </div>
-</div>
+    </div>
