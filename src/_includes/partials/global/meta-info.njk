@@ -1,14 +1,27 @@
-{% set pageTitle = title + ' - ' + site.name %}
-{% set pageDesc = '' %}
+{# ===========================
+   Meta Info (SEO + Social)
+   =========================== #}
+
+{# Titles #}
 {% set siteTitle = site.name %}
+{% set pageTitle = metaTitle or (title + ' - ' + site.name) %}
+
+{# Descriptions (fallback to front-matter "description") #}
+{% set pageDesc = metaDesc or description or '' %}
+
+{# URL #}
 {% set currentUrl = site.url + page.url %}
 
-{% if metaTitle %}
-  {% set pageTitle = metaTitle %}
-{% endif %}
+{# Social image: prefer socialImage, else featuredImage #}
+{% set socialImg = socialImage or featuredImage %}
 
-{% if metaDesc %}
-  {% set pageDesc = metaDesc %}
+{# Ensure og:image is ABSOLUTE (LinkedIn requirement) #}
+{% if socialImg %}
+  {% if socialImg[0] == '/' %}
+    {% set socialAbs = site.url + socialImg %}
+  {% else %}
+    {% set socialAbs = socialImg %}
+  {% endif %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
@@ -23,15 +36,15 @@
   <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
 {% endif %}
 
-{% if metaDesc %}
-  <meta name="description" content="{{ metaDesc }}" />
-  <meta name="twitter:description" content="{{ metaDesc }}" />
-  <meta property="og:description" content="{{ metaDesc }}" />
+{% if pageDesc %}
+  <meta name="description" content="{{ pageDesc }}" />
+  <meta name="twitter:description" content="{{ pageDesc }}" />
+  <meta property="og:description" content="{{ pageDesc }}" />
 {% endif %}
 
-{% if socialImage %}  
-  <meta property="og:image" content="{{ socialImage }}" />
-  <meta name="twitter:image" content="{{ socialImage }}" />
+{% if socialAbs %}
+  <meta property="og:image" content="{{ socialAbs }}" />
+  <meta name="twitter:image" content="{{ socialAbs }}" />
   <meta property="og:image:alt" content="Page image for {{ site.name }}" />
   <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}
@@ -39,3 +52,4 @@
 {% if site.paymentPointer %}
   <meta name="monetization" content="{{ site.paymentPointer }}" />
 {% endif %}
+

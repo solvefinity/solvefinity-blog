@@ -48,20 +48,24 @@
         <div class="ml-embedded" data-form="XYeqGG"></div>
       </div>
 
-      <div class="social-cta">
-        <h3 class="u-underline">Continue the conversation</h3>
-        <p>What’s your take? Share your thoughts or start a discussion:</p>
-        <p>
-          <a class="button"
-             href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ site.url }}{{ page.url }}"
-             target="_blank" rel="noopener">Discuss on X</a>
-             <p></p>
-          <a class="button"
-             href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-             target="_blank" rel="noopener">Share on LinkedIn</a>
-        </p>
-      </div>
-    </div>
+<div class="social-cta">
+  <h3 class="u-underline">Continue the conversation</h3>
+  <p>What’s your take? Share your thoughts or start a discussion:</p>
+
+  <p>
+    <a class="button"
+       href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ site.url }}{{ page.url }}"
+       target="_blank" rel="noopener">Discuss on X</a>
+  </p>
+
+  <p>
+    <a class="button"
+       href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+       target="_blank" rel="noopener">Share on LinkedIn</a>
+  </p>
+</div>
+
+
   </section>
 
   {# Meta: Posted under + Tags (left-aligned under the band) #}
