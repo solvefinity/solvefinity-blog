@@ -7,7 +7,9 @@ tags:
   - math-education
   - problem-based-learning
   - math-is-messy
-summary: Real math is full of false starts, approximations, and creative choices. That’s not a flaw—that’s the work.
+metaTitle: Math Is Messy-Why Struggle and Uncertainty Belong in Math Class
+metaDesc: Real math is full of false starts, revisions, and approximations. Learn why embracing the mess builds student agency, problem-solving skills, and confidence.
+summary: Real math isn’t neat—it’s trial, error, and persistence. Discover why showing students the messy side of problem-solving helps them see themselves as mathematicians.
 cover: /images/math-is-messy.webp   # reuse the homepage card image
 permalink: /posts/math-is-messy/
 ---

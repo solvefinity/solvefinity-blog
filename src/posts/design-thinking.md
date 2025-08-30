@@ -2,14 +2,17 @@
 title: "Design Thinking in Math and EdTech: Why It Matters"
 description: "Exploring how design thinking transforms math education, fosters student agency, and shapes the future of educational technology."
 date: 2025-08-27
-primary-category: math-education
+primaryCategory: math-education
 tags:
   - math-education
   - design-thinking
   - tech-ai
-  - problem-based-thinking 
+  - problem-based-thinking
+metaTitle: Design Thinking in Math and EdTech
+metaDesc: Design thinking encourages creativity, iteration, and empathy in problem-solving. See how it transforms math instruction and guides the future of educational technology.
+summary: Design thinking puts learners at the center. From math classrooms to EdTech, it reframes struggle as iteration and empowers students to explore, test, and refine ideas.
 permalink: /design-thinking/
-featuredImage: /images/design-thinking.webp
+cover: /images/design-thinking.webp
 layout: layouts/post.njk
 ---
  
@@ -26,6 +29,14 @@ and embrace failure as a stepping stone to deeper understanding.
 Whether in math or educational technology, design thinking puts the learner at the center,
 valuing flexibility, exploration, and real-world problem-solving.</p>
 </div>
+
+### How I First Discovered Design Thinking
+
+I first encountered design thinking through the **LEAP (Leadership & Educator Advancement Project) program**, a professional learning partnership between Towson University and my district. The course itself was focused on *Social & Emotional Learning in K–12 Classrooms*, but one of the modules introduced design thinking as a way to approach instruction.  
+
+Honestly, I didn’t expect it to change the way I thought about teaching math. But the module emphasized the *empathy* step—really listening to students, understanding their needs, and creating multiple entry points that honor who they are and where they are. I was already familiar with iterative processes, but this was the first time I had a framework and a name for what I had been circling around in my own teaching.  
+
+It also connected directly to ideas I was already passionate about, like [Math Is Messy](/posts/math-is-messy/). Suddenly, I could see that the messy, exploratory side of math wasn’t just a philosophy—it was part of a broader design-thinking approach that applies to both education and EdTech.
 
 
 ### Why design thinking matters in math
