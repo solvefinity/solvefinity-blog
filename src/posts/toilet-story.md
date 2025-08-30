@@ -93,7 +93,7 @@ I’m teaching myself Python. I’m learning how AI systems give feedback. I’m
 <!-- FINAL SECTION (image on the left) -->
 
 <div class="media">
-    <img src="/images/blog/Toiletlesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
+    <img src="/images/blog/ToiletLesson-768x512.webp" alt="Confused person comparing golf balls and billiard balls">
   </div>
 <div>
     <h3>COMING SOON: THE TOILET LESSON</h3>
