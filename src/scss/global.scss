@@ -1373,8 +1373,10 @@ a.button:visited { color: #fff; }
 }
 
 .chip--tag {
-  background: var(--color-theme-primary); /* your teal */
-  color: #fff;
+  background: var(--accent-primary);  /* your teal/blue */
+  color: #fff;                        /* force white text */
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .chip--tag:hover {
