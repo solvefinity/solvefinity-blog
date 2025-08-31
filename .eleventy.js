@@ -1,3 +1,4 @@
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const fs = require('fs');
@@ -35,6 +36,11 @@ module.exports = function(config) {
   config.addPassthroughCopy('src/admin/previews.js');
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
+
+// Generate sitemap.xml
+  config.addPlugin(sitemap, {
+  sitemap: { hostname: "https://solvefinity.com" }
+});
 
 
   const now = new Date();
