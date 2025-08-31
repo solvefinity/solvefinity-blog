@@ -915,12 +915,13 @@ a.button,
 a.button:link,
 a.button:visited,
 .button,
-.chip,
-.chip:link,
-.chip:visited {
+.chip:not(.chip--tag),
+.chip:not(.chip--tag):link,
+.chip:not(.chip--tag):visited {
   text-decoration: none;
-  color: inherit; /* components set their own color */
+  color: inherit; /* components set their own colors */
 }
+
 /* Ensure visual button links are white text */
 a.button,
 a.button:link,
@@ -1519,6 +1520,22 @@ a.button:visited { color: #fff; }
 .chip { display: inline-block; padding: .3rem .7rem; border-radius: 999px; font-size: .9rem; line-height: 1; text-decoration: none; transition: transform .06s ease, opacity .12s ease; }
 .chip--tag { background: var(--color-theme-primary); color: #fff; }
 .chip--tag:hover { transform: translateY(-1px); opacity: .9; }
+
+/* Post footer tag chips: enforce contrast */
+.post-footer__meta-wrap a.chip.chip--tag,
+.post-footer__meta-wrap a.chip.chip--tag:link,
+.post-footer__meta-wrap a.chip.chip--tag:visited {
+  background: var(--accent-primary);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+.post-footer__meta-wrap a.chip.chip--tag:hover,
+.post-footer__meta-wrap a.chip.chip--tag:focus {
+  background: var(--accent-hover);
+  color: #fff !important;
+}
+
 
 /* global.scss */
 
