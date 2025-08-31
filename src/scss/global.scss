@@ -1734,3 +1734,53 @@ a.button:visited {
 }
 
 
+/* Tables */
+
+/* ===== Solvefinity table (namespaced, safe) ===== */
+.sf-table-wrap { overflow-x: auto; }
+
+/* Base table */
+.sf-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;                 /* switch to .sf-table--fixed to use <colgroup> */
+  background: var(--bg-light);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.sf-table caption {
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0 0 .5rem 0;
+}
+
+.sf-table th,
+.sf-table td {
+  padding: 12px 16px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* Header row + borders using your palette */
+.sf-table thead th {
+  background: var(--bg-md-gray);
+  color: var(--text-heading);
+  border-bottom: 2px solid var(--bg-lt-gray2);
+}
+.sf-table tbody tr + tr td,
+.sf-table tbody tr + tr th {
+  border-top: 1px solid var(--bg-lt-gray2);
+}
+
+/* Optional accents */
+.sf-table--zebra tbody tr:nth-child(even) { background: var(--bg-light); }
+.sf-table--compact th,
+.sf-table--compact td { padding: 8px 12px; }
+.sf-table--fixed { table-layout: fixed; }     /* use with <colgroup> */
+
+.sf-table th[scope="row"] { font-weight: 600; color: var(--text-heading); }
+
+/* Small screens: allow horizontal scroll nicely */
+.sf-table-wrap { -webkit-overflow-scrolling: touch; }

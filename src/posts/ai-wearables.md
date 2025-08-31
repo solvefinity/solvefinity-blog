@@ -75,3 +75,75 @@ Not every student is going to have access to AI wearables. Without school-wide p
 
 Most schools are still catching up. Here’s a snapshot of relevant laws and considerations:
 
+<div class="sf-table-wrap">
+<table class="sf-table sf-table--fixed sf-table--zebra">
+  <caption>Policy Snapshot</caption>
+
+  <!-- Optional: control column widths -->
+  <colgroup>
+    <col style="width:26%">
+    <col style="width:36%">
+    <col style="width:38%">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th scope="col">Policy/Law</th>
+      <th scope="col">What it covers</th>
+      <th scope="col">Implications</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">FERPA <sup>[1]</sup></th>
+      <td>Protects student education records.</td>
+      <td>AI tools must not expose identifiable student data.</td>
+    </tr>
+    <tr>
+      <th scope="row">COPPA <sup>[2]</sup></th>
+      <td>Regulates data collection from children under 13.</td>
+      <td>Parental consent required for AI tools collecting data.</td>
+    </tr>
+    <tr>
+      <th scope="row">State Recording Laws <sup>[3]</sup></th>
+      <td>Vary by state.</td>
+      <td>Some require two-party consent for audio recording.</td>
+    </tr>
+    <tr>
+      <th scope="row">District Tech Policies</th>
+      <td>Often outdated.</td>
+      <td>Few address wearable AI or real-time capture.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Educators need clear guidance—not just on legality, but on ethical use.</p>
+
+### What Can Schools Do?
+
+To responsibly integrate AI wearables, schools should:
+
+- **Develop clear policies** around recording, data use, and device access
+- **Train teachers** on both the benefits and risks of AI tools
+- **Ensure equitable access** through funding or device lending programs
+- **Reimagine assessment** to focus on inquiry and reasoning instead of rote answers
+
+In another post, I discuss why[Math is Messy](/posts/math-is-messy)and why we need to shift away from an emphasis on symbolic manipulation. The emergence of sophisticated AI tools makes this change that much more urgent. 
+
+### Final Thoughts
+
+AI won’t replace the messy, beautiful process of mathematical inquiry. But it can support it if we’re intentional. 
+
+Imagine a classroom where every student, regardless of language or learning profile, can engage in rich problem-solving. Where tech scaffolds understanding, not shortcuts it. Where teachers feel empowered, not exposed.
+
+That’s the future Solvefinity is working toward. But it starts with asking the right questions and building the right policies.
+
+**What do you think about wearable AI devices in the classroom?** 
+Share your thoughts on X or LinkedIn by clicking one of the sharing buttons below.
+
+#### References
+<ul>
+<li>[1] U.S. Department of Education. (2023). Family Educational Rights and Privacy Act (FERPA).</li>
+<li>[2] Federal Trade Commission. (2023). Children’s Online Privacy Protection Rule (COPPA).</li>
+<li>[3] Digital Media Law Project. (2022). State Laws on Recording Conversations.</li>
