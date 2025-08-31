@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: "Why Every Student Needs Data Literacy"
-date: 2025-06-10T00:00:00.000Z
+date: 2025-08-10T00:00:00.000Z
 metaTitle: "Why Teach Data Literacy: Preparing Students for Math Pathways of the Future"
 metaDesc: "As states adopt new data science pathways, math teachers face the new challenge of teaching data literacy. Here’s why it matters for students’ futures and how to get started."
 primaryCategory: data-science-modeling

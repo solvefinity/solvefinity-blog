@@ -895,7 +895,11 @@ a {
   padding: 0 1rem;
 }
 
-/* Base link style */
+/* =======================
+   Base link styles (site-wide)
+   ======================= */
+
+/* Default: links look like links */
 a {
   color: var(--link-color);
   text-decoration: underline;
@@ -906,117 +910,36 @@ a:focus {
   color: var(--link-hover);
 }
 
-/* Buttons, chips, and any “link-as-button” components should NOT be underlined */
+/* Components that should NOT look like links */
+a.button,
+a.button:link,
+a.button:visited,
 .button,
-.button:link,
-.button:visited,
 .chip,
 .chip:link,
 .chip:visited {
   text-decoration: none;
-  color: inherit; /* buttons set their own colors */
+  color: inherit; /* components set their own color */
 }
-
-/* In post content, make sure regular links are visibly links */
-.post__body a:not(.button):not(.chip) {
-  text-decoration: underline;
-}
-
-/* If you have nav links or footer links that should not be underlined, scope it: */
-.site-nav a,
-.footer a.buttonlike {
-  text-decoration: none;
-}
-
-
-/* Ensure all buttons stay button-looking everywhere */
+/* Ensure visual button links are white text */
 a.button,
 a.button:link,
-a.button:visited {
-  color: #fff;
-  text-decoration: none;
+a.button:visited { color: #fff; }
+
+/* Reading content: make inline links clearly visible */
+.post__body a:not(.button):not(.chip) {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-primary);
+  text-underline-offset: 2px;
+}
+.post__body a:not(.button):not(.chip):hover {
+  text-underline-offset: 3px;
 }
 
 /* =======================
-    2. Solvefinity Nav Links
-    ====================== */
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li a {
-  color: white;
-  padding: 6px 10px;
-  position: relative;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links li a:hover {
-  background-color: var(--accent-primary);
-  transition: all 0.2s ease-in-out;
-  border-radius: 4px;
-}
-
-.nav-links li a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  height: 2px;
-  width: 100%;
-  background: var(--accent-primary);
-}
-
-/* DESKTOP NAV */
-.hamburger {
-  display: none;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .site-name {
-    display: none;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: var(--header-bg);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 10px 0;
-  }
-
-  .nav-links li {
-    text-align: right;
-    padding: 10px 20px;
-  }
-
-  .menu-toggle:checked + .hamburger + nav .nav-links {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* =======================
-   3. NAVIGATION BAR
+   Navigation
    ======================= */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -1029,15 +952,8 @@ a.button:visited {
   z-index: 1000;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 5.5rem;
-  margin-right: .75rem;
-}
+.logo-container { display: flex; align-items: center; }
+.logo { height: 5.5rem; margin-right: .75rem; }
 
 .site-name {
   display: none; /* hidden on mobile */
@@ -1047,9 +963,10 @@ a.button:visited {
   font-weight: 500;
 }
 
+/* Base nav list (mobile default: hidden) */
 .nav-links {
   list-style: none;
-  display: none; /* hidden by default (mobile) */
+  display: none;               /* hidden by default on mobile */
   flex-direction: column;
   background-color: var(--header-bg);
   position: absolute;
@@ -1059,26 +976,23 @@ a.button:visited {
   padding: 10px 0;
 }
 
-.nav-links li {
-  text-align: right;
-  padding: 10px 20px;
-}
+/* Nav items */
+.nav-links li { text-align: right; padding: 10px 20px; }
 
+/* Nav anchors: NO underline in nav only */
 .nav-links li a {
   color: whitesmoke;
   padding: 6px 10px;
   position: relative;
   transition: background 0.3s ease;
-  text-decoration: none;
+  text-decoration: none;       /* scoped to nav */
   font-weight: 500;
 }
-
 .nav-links li a:hover {
   background-color: var(--accent-primary);
   transition: all 0.2s ease-in-out;
   border-radius: 4px;
 }
-
 .nav-links li a.active::after {
   content: "";
   position: absolute;
@@ -1089,27 +1003,14 @@ a.button:visited {
   background: var(--accent-primary);
 }
 
-.menu-toggle {
-  display: none;
-}
+/* Mobile toggles */
+.hamburger { display: block; font-size: 26px; color: whitesmoke; cursor: pointer; }
+.menu-toggle { display: none; }
+.menu-toggle:checked + .hamburger + nav .nav-links { display: flex; }
 
-.menu-toggle:checked + .hamburger + nav .nav-links {
-  display: flex;
-}
-
-.hamburger {
-  display: block; /* visible on mobile */
-  font-size: 26px;
-  color: whitesmoke;
-  cursor: pointer;
-}
-
-/* === Enhancements for tablets/desktops === */
+/* Tablet/desktop nav */
 @media (min-width: 769px) {
-  .site-name {
-    display: none;
-  }
-
+  .site-name { display: none; }
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -1118,15 +1019,8 @@ a.button:visited {
     padding: 0;
     background-color: transparent;
   }
-
-  .nav-links li {
-    text-align: left;
-    padding: 0;
-  }
-
-  .hamburger {
-    display: none;
-  }
+  .nav-links li { text-align: left; padding: 0; }
+  .hamburger { display: none; }
 }
 
 /* =======================

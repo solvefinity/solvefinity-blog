@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: How a Toilet on Instagram Perfectly Captured What's Wrong with Math Education
-date: 2025-06-03T00:28:37.218Z
+date: 2025-07-23T00:28:37.218Z
 metaTitle: "Why Math Is Messy: Rethinking Math Education"
 metaDesc: A viral toilet video shows why real math is messy—and why students
   need open-ended problems, design thinking, and adaptive tools for the future

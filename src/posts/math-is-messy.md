@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Math is Messy — And That’s the Point
-date: 2025-06-18T08:44:31.218Z
+date: 2025-08-18T08:44:31.218Z
 primaryCategory: math-education
 tags:
   - math-education

@@ -1,7 +1,7 @@
 ---
 title: "Design Thinking in Math and EdTech: Why It Matters"
 description: "Exploring how design thinking transforms math education, fosters student agency, and shapes the future of educational technology."
-date: 2025-08-27
+date: 2025-08-14
 primaryCategory: math-education
 tags:
   - math-education
