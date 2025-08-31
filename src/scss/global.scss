@@ -1679,10 +1679,17 @@ a.button:visited {
 }
 */
 /* Center standalone featured images, independent of parent layout */
+/* Center standalone featured images, independent of parent layout */
 .featured-image {
   display: grid;            /* isolates from flex/text-align quirks */
   place-items: center;      /* centers both axes */
   margin: 1rem 0;
+}
+
+.featured-image figure {
+  display: inline-block;    /* shrink-wrap image + caption */
+  margin: 0;                /* remove default figure margins */
+  text-align: center;       /* center caption text */
 }
 
 .featured-image img {
@@ -1690,6 +1697,13 @@ a.button:visited {
   width: 100%;
   height: auto;
   float: none;              /* neutralize any float utilities */
-  display: block;           /* make margin/padding predictable */
+  display: block;           /* predictable sizing */
+  border-radius: 0.5rem;    /* optional: matches your other images */
+}
+
+.featured-image figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
 }
 
