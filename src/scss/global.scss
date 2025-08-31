@@ -1203,14 +1203,21 @@ a.button:visited {
 /* --- Blog card grid --- */
 .post-grid__items {
   display: grid;
-  gap: 1.75rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 
   &:only-child,
   &:has(> :only-child) {
     justify-items: center;   /* center the lone card */
   }
 }
+
+.wrapper {
+  max-width: 72rem;   /* ~1152px */
+  margin: 0 auto;     /* center it */
+  padding: 0 1rem;    /* gutters */
+}
+
 .post-card {
   background: var(--bg, #0a1f2b);
   border-radius: 14px;

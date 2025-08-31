@@ -62,7 +62,7 @@ Around the same time, I was taking a professional learning course on social-emot
 
 <!-- DESIGN THINKING (image on the right) -->
 
-<div class="split reverse">
+<div class="split">
   <div>
     <h3>DESIGN THINKING</h3>
     <p>Design thinking emphasizes:</p>
