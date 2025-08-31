@@ -895,6 +895,40 @@ a {
   padding: 0 1rem;
 }
 
+/* Base link style */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover,
+a:focus {
+  color: var(--link-hover);
+}
+
+/* Buttons, chips, and any “link-as-button” components should NOT be underlined */
+.button,
+.button:link,
+.button:visited,
+.chip,
+.chip:link,
+.chip:visited {
+  text-decoration: none;
+  color: inherit; /* buttons set their own colors */
+}
+
+/* In post content, make sure regular links are visibly links */
+.post__body a:not(.button):not(.chip) {
+  text-decoration: underline;
+}
+
+/* If you have nav links or footer links that should not be underlined, scope it: */
+.site-nav a,
+.footer a.buttonlike {
+  text-decoration: none;
+}
+
+
 /* Ensure all buttons stay button-looking everywhere */
 a.button,
 a.button:link,
