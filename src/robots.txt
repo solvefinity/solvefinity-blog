@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin/   # if you use Netlify CMS
+Sitemap: https://solvefinity.com/sitemap.xml
