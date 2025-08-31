@@ -13,7 +13,7 @@ tags:
 cardTitle: "Why Every Student Needs Data Literacy"
 summary: "Data is everywhere. From TikTok algorithms to policy decisions, our students need to question, interpret, and use data responsibly. This post kicks off a series for teachers who are new to teaching data literacy in math."
 cover: /images/data-literacy.webp
-permalink: /data-literacy/
+permalink: /posts/data-literacy/
 ---
 
 <div class="featured-image">

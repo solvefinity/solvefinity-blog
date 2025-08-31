@@ -11,7 +11,7 @@ tags:
 metaTitle: Design Thinking in Math and EdTech
 metaDesc: Design thinking encourages creativity, iteration, and empathy in problem-solving. See how it transforms math instruction and guides the future of educational technology.
 summary: Design thinking puts learners at the center. From math classrooms to EdTech, it reframes struggle as iteration and empowers students to explore, test, and refine ideas.
-permalink: /design-thinking/
+permalink: /posts/design-thinking/
 cover: /images/design-thinking.webp
 layout: layouts/post.njk
 ---
