@@ -1278,6 +1278,29 @@ a.button:visited {
     height: 260px; }
 }
 
+.stretched-link {
+  position: absolute;
+  inset: 0;                  /* cover the whole card */
+  z-index: 1;                /* sits above background */
+  text-indent: -9999px;      /* hide any text */
+  background: transparent;   /* don’t block visuals */
+}
+
+/* Keep title + category + button links above the stretched link */
+.post-card__title a,
+.post-card__pill,
+.post-card__media {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: focus style so keyboard users see feedback */
+.stretched-link:focus-visible {
+  outline: 3px solid var(--color-theme-primary, #127985);
+  outline-offset: 3px;
+  border-radius: inherit;
+}
+
 /* --- POST PAGE ONLY --- */
 .post-hero {              /* text-only, slim hero */
   min-height: 200px;
@@ -1706,4 +1729,5 @@ a.button:visited {
   color: #555;
   margin-top: 0.5rem;
 }
+
 

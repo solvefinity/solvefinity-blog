@@ -8,7 +8,6 @@
   </a>
 
   <div class="post-card__body">
-    {# Work out a friendly category label, safely #}
     {% set catSlug = post.data.primaryCategory or (post.data.tags and post.data.tags[0]) %}
     {% if catSlug %}
       {% set catMap = {
@@ -32,5 +31,9 @@
       <time datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
     </p>
   </div>
+
+  {# Add stretched link so whole card is clickable #}
+  <a class="stretched-link" href="{{ post.url }}" aria-label="{{ post.data.title }}"></a>
 </article>
+
 
