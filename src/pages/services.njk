@@ -11,10 +11,18 @@ layout: false
 <main id="main-content">
 
   <section class="hero hero--about">
-    <video autoplay muted loop playsinline class="hero-media">
-      <source src="/images/solvefinity-banner-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <video class="hero-media"
+       autoplay
+       muted
+       playsinline
+       loop
+       preload="metadata"
+       poster="/images/solvefinity-hero-video-still.webp">
+  <source src="/images/solvefinity-banner-video.webm" type="video/webm" />
+  <source src="/images/solvefinity-banner-video.mp4"  type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Empowering Educators to Build What’s Next</h1>
