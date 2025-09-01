@@ -1,5 +1,0 @@
-/about     /           301
-/contact   /contact/   301
-/services  /services/  301
-http://*   https://:splat  301!
-https://*  https://:splat  301!
