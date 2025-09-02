@@ -2,13 +2,14 @@
   "showThemeCredit": true,
   "name": "Solvefinity",
   "shortDesc": "Infinite Solutions for Limitless Learning",
-  "url": "https://solvefinity-blog.netlify.app",
+  "description": "Problem-based math, teacher-first edtech, and data-literacy curricula that work in real classrooms.",
+  "url": "https://solvefinity.com",
   "authorEmail": "admin@solvefinity.com",
   "authorHandle": "@solvefinity",
   "authorName": "Solvefinity",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
   "paymentPointer": "",
-  "faviconPath": "/images/sf_favicon.ico"
+  "faviconPath": "/images/sf_favicon.ico",
+  "socialImage": "/images/social-default.png"
 }
-

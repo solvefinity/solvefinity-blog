@@ -7,7 +7,7 @@
 {% set pageTitle = metaTitle or (title + ' - ' + site.name) %}
 
 {# Descriptions (fallback to front-matter "description") #}
-{% set pageDesc = metaDesc or description or '' %}
+{% set pageDesc = (metaDesc or description or site.description) | striptags | trim %}
 
 {# URL #}
 {% set currentUrl = site.url + page.url %}
