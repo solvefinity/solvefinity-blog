@@ -9,6 +9,28 @@
   {% include "partials/global/meta-info.njk" %}
   <script>document.documentElement.classList.remove('no-js');</script>
   <style>{% include "assets/css/global.css" %}</style>
+
+
+<!-- Make Google font files start connecting sooner -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- Your two families, same weights, with swap (prevents blocking) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- (Optional) preconnect to the CDN used for icons -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+      media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+</noscript>
   
     <!-- MailerLite universal script -->
   <script>
@@ -16,7 +38,7 @@
   (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
   ml('account','1347362');
   </script>
-  
+  <link rel="preload" as="image" href="/images/solvefinity-hero-video-still.webp" />
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YF04PQK18J"></script>
 <script>
@@ -25,9 +47,6 @@
   gtag('js', new Date());
   gtag('config','G-YF04PQK18J');
 </script>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
 
   {% block head %}
   {% endblock %}
