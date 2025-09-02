@@ -92,7 +92,7 @@ If you’d like to watch the full documentary, it’s available through the [Int
 
 Let’s make room for uncertainty, estimation, and iteration. Let students see the mess, live in the mess, and learn from the mess. Because in a world full of calculators, <strong>thinkers</strong> will always stand out.
 
-<img src="/images/blog/math-is-messy-paper.webp"
+<img src="/images/blog/math-is-messy-paper.webp" alt=""
      class="img-left">
 
 <h4><strong>Try These Messy Math Resources</strong></h4>
