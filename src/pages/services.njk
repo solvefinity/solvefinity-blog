@@ -11,17 +11,15 @@ layout: false
 <main id="main-content">
 
   <section class="hero hero--about">
-    <video class="hero-media"
-       autoplay
-       muted
-       playsinline
-       loop
-       preload="metadata"
-       poster="/images/solvefinity-hero-video-still.webp">
-  <source src="/images/solvefinity-banner-video.webm" type="video/webm" />
-  <source src="/images/solvefinity-banner-video.mp4"  type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+ <video class="hero-media"
+         autoplay
+         muted
+         playsinline
+         loop
+         preload="metadata">
+    <source src="/images/solvefinity-banner-video.webm?v=2" type="video/webm" />
+    <source src="/images/solvefinity-banner-video.mp4?v=2"  type="video/mp4" />
+  </video>
 <script>
   const v = document.querySelector('.hero-media');
   if (v) {
