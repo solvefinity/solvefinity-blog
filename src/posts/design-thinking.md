@@ -14,6 +14,8 @@ summary: Design thinking puts learners at the center. From math classrooms to Ed
 permalink: /posts/design-thinking/
 cover: /images/design-thinking.webp
 layout: layouts/post.njk
+engage: >
+  How can you incorporate design thinking in your classroom?
 ---
  
  <div class="featured-image">
@@ -23,14 +25,13 @@ layout: layouts/post.njk
 <div>
 <h3>What is design thinking?</h3>
 <p>Design thinking is a problem-solving framework that encourages creativity, iteration, and human-centered solutions.
-Instead of following rigid steps, students and educators explore different approaches, refine their thinking,
-and embrace failure as a stepping stone to deeper understanding.
+Instead of following rigid steps, students and educators explore different approaches, refine their thinking, and embrace failure as a stepping stone to deeper understanding.
 
 Whether in math or educational technology, design thinking puts the learner at the center,
 valuing flexibility, exploration, and real-world problem-solving.</p>
 </div>
 
-### How I First Discovered Design Thinking
+## How I First Discovered Design Thinking
 
 I first encountered design thinking through the **LEAP (Leadership & Educator Advancement Project) program**, a professional learning partnership between Towson University and my district. The course itself was focused on *Social & Emotional Learning in K–12 Classrooms*, but one of the modules introduced design thinking as a way to approach instruction.  
 
@@ -38,13 +39,11 @@ Honestly, I didn’t expect it to change the way I thought about teaching math. 
 
 It also connected directly to ideas I was already passionate about, like [Math Is Messy](/posts/math-is-messy/). Suddenly, I could see that the messy, exploratory side of math wasn’t just a philosophy—it was part of a broader design-thinking approach that applies to both education and EdTech.
 
-
-### Why design thinking matters in math
+## Why design thinking matters in math
 
 Too often, math is presented as a series of fixed procedures leading to a single right answer. But in real-world applications—whether in engineering, data science, or finance. Problems are rarely that straightforward. Students need to learn how to define problems, identify missing information, test ideas, and adjust their approach when things don’t work out.
 
 Math should be messy because that’s how real problem-solving happens. Instead of seeing struggle as a sign of failure, students should see it as an opportunity to refine their thinking. When we teach students that math is about exploring, not just solving, we prepare them to be critical thinkers.
-
  
 <div class="featured-image">
 <img src="/images/blog/design-thinking-steps.webp" alt="Illustration of the Design Thinking process in education: empathize, define, ideate, prototype, test, and iterate">
@@ -65,10 +64,8 @@ I believe that effective educational tools should:</p>
 
 I take a design-thinking approach to building interactive learning tools, ensuring that students and teachers have the ability to test ideas, refine understanding, and make mistakes in a safe, exploratory environment.
 
-### Bringing it all together
+## Bringing it all together
 
 Design thinking is at the heart of everything I do—from developing math lessons to creating adaptive technology. It’s a mindset that values experimentation, revision, and seeing failure as part of the learning process. Whether you’re a teacher, developer, or just curious about better ways to learn, let’s explore how we can make math and technology more engaging, accessible, and student-centered.
 
 <strong>Subscribe</strong> below for updates when new materials are available for design thinking. 
-
-<strong>How do you incorporate design-thinking into your work?</strong> Let us know on X.

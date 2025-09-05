@@ -12,6 +12,8 @@ metaDesc: Real math is full of false starts, revisions, and approximations. Lear
 summary: Real math isn’t neat—it’s trial, error, and persistence. Discover why showing students the messy side of problem-solving helps them see themselves as mathematicians.
 cover: /images/math-is-messy.webp   # reuse the homepage card image
 permalink: /posts/math-is-messy/
+engage: >
+  What's the "messiest" lesson you've taught...or learned?
 ---
 
   <div class="featured-image">
@@ -23,7 +25,7 @@ permalink: /posts/math-is-messy/
     <p>When students only see polished final answers, they miss the thinking that got us there - the scratch work, the dead ends, the “wait… does this even make sense?” moments that are <em>actually</em> the work of mathematics.  </p>
 </div>
 
-### What students really need to see
+## What Students Really Need to See
 
 We need to pull back the curtain and show students our mess as teachers. Think aloud, explain your reasoning, and don't be afraid to work through problems with students. Celebrate the messy work of students, too! 
 
@@ -70,7 +72,7 @@ I’ll dig more into inquiry-based learning in a future post, but if you’d lik
 
 Messy math doesn’t just live in classrooms. Even at the highest levels, mathematicians wrestle with uncertainty, chase ideas that don’t work, and circle back to try again. One of my favorite examples to share with students is Andrew Wiles, whose story shows that the mess is not something to grow out of—it’s part of how math works, all the way to the top.
 
-### Even Mathematicians Get Messy
+## Even Mathematicians Get Messy
 
 When I taught geometry, I used to show my students a clip from the NOVA documentary *The Proof*, which tells the story of Andrew Wiles, the mathematician who finally solved Fermat’s Last Theorem.
 
@@ -88,7 +90,7 @@ I wanted my students to see this because it proves something essential: even the
 If you’d like to watch the full documentary, it’s available through the [Internet Archive](https://archive.org/details/NOVATheProof). (When I first showed it, YouTube didn't exist, so I had to fast forward through a VHS copy.)
 
 
-### Ready to get messy?
+## Ready to get messy?
 
 Let’s make room for uncertainty, estimation, and iteration. Let students see the mess, live in the mess, and learn from the mess. Because in a world full of calculators, <strong>thinkers</strong> will always stand out.
 
@@ -104,5 +106,3 @@ Let’s make room for uncertainty, estimation, and iteration. Let students see t
 </ul>
 
 <strong>Subscribe below</strong> to be notified when new Solvefinity messy math lesson plans drop.
-
-<strong>Join the conversation</strong> - What's the messiest lesson you've ever taught...or learned from? Share your thoughts on X or connect with me on LinkedIn.

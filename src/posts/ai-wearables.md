@@ -13,19 +13,21 @@ tags:
 permalink: /posts/ai-wearables/
 cover: /images/blog/smart-devices-in-schools.webp
 cardTitle: "AI Wearables in the Math Classroom: Promise, Pitfalls, and Policy" 
+engage: >
+  What do you think about AI wearable devices in the classroom?
 ---
 
 <div class="featured-image">
   <img src="/images/blog/smart-devices-in-schools.webp" alt="A student wearing AI glasses and an AI voice recording assistant pendant in a math class with a concerned teacher looking on">
 </div>
 
-### Coming soon to a classroom near you?
+## Coming Soon to a Classroom Near You?
 As AI-powered wearables like Plaud smart microphones and AI glasses begin to trickle into classrooms, educators are facing a new frontier. These tools offer unprecedented support for learners—real-time translation, automatic note-taking, and even visual overlays that could help students "see" math in new ways.
 But they also raise thorny questions: Who gets access? What happens to test security? And are teachers ready for their lessons to be recorded, transcribed, and possibly shared?
 
 At Solvefinity, where we champion problem-based and inquiry-driven learning, we see both the potential and the pitfalls. I personally love AI, but as a classroom teacher, I also worry about the implications. Let’s unpack what’s at stake.
 
-### The promise
+## The Promise
 
 <p>AI wearables could be game-changers for inclusive education.</p>
 
@@ -41,18 +43,18 @@ At Solvefinity, where we champion problem-based and inquiry-driven learning, we 
 
 These tools align beautifully with the goals of differentiated instruction and personalized learning. But only if used thoughtfully.
 
-### The Pitfalls
+## The Pitfalls
 <div class="img-wide-left">
 <img src="/images/blog/ai-glasses.webp" alt="A pair of AI glasses with projected images on the lenses">
 </div>
 
-#### Will it "do the math" for them?
+### Will it "do the math" for them?
 
 Students have always found a way to cheat. We've come a long way from passing notes in class, though. One of the major pain points of cell phones in classrooms (besides the distraction) has been students taking pictures of tests and sending the results to their friends. Especially since the pandemic, we've seen a steady rise in the use of apps that allow students to take a picture of an equation and be instantly given step-by-step results. I've personally had students in algebra hand in elegant calculus solutions before, only to be baffled that I was able to deduce that they used an app. 
 
 AI glasses could take this further, offering discreet access to answers during tests, solving problems in real time, or allowing a student to listen to a step-by-step walkthrough from a friend in another room. 
 
-#### Are teachers ready to be recorded?
+### Are teachers ready to be recorded?
 
 Besides the video recording capabilities of things like AI glasses, portable AI note-takers and apps are able to record, transcribe, and summarize entire lessons. While this could support absent students or those needing review, it also introduces:
 
@@ -67,11 +69,11 @@ Besides the video recording capabilities of things like AI glasses, portable AI 
 
 Some argue teachers should embrace transparency. Others worry about surveillance culture creeping into the classroom.
 
-#### The equity gap
+### The equity gap
 
 Not every student is going to have access to AI wearables. Without school-wide policies or funding, these tools could deepen existing inequities. This contradicts the very ethos of inquiry-based learning, which thrives on equity and access to exploration and discovery. 
 
-### What Policies Exist?
+## What Policies Exist?
 
 Most schools are still catching up. Here’s a snapshot of relevant laws and considerations:
 
@@ -120,7 +122,7 @@ Most schools are still catching up. Here’s a snapshot of relevant laws and con
 </div>
 <p>Educators need clear guidance—not just on legality, but on ethical use.</p>
 
-### What Can Schools Do?
+## What Can Schools Do?
 
 To responsibly integrate AI wearables, schools should:
 
@@ -131,7 +133,7 @@ To responsibly integrate AI wearables, schools should:
 
 In another post, I discuss why[Math is Messy](/posts/math-is-messy)and why we need to shift away from an emphasis on symbolic manipulation. The emergence of sophisticated AI tools makes this change that much more urgent. 
 
-### Final Thoughts
+## Final Thoughts
 
 AI won’t replace the messy, beautiful process of mathematical inquiry. But it can support it if we’re intentional. 
 
@@ -139,10 +141,7 @@ Imagine a classroom where every student, regardless of language or learning prof
 
 That’s the future Solvefinity is working toward. But it starts with asking the right questions and building the right policies.
 
-**What do you think about wearable AI devices in the classroom?** 
-Share your thoughts on X or LinkedIn by clicking one of the sharing buttons below.
-
-#### References
+### References
 <ul>
 <li>[1] U.S. Department of Education. (2023). Family Educational Rights and Privacy Act (FERPA).</li>
 <li>[2] Federal Trade Commission. (2023). Children’s Online Privacy Protection Rule (COPPA).</li>

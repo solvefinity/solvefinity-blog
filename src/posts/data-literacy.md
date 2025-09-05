@@ -20,7 +20,7 @@ permalink: /posts/data-literacy/
   <img src="/images/data-literacy.webp" alt="Teacher presenting graphs to students in a classroom">
 </div>
 
-### Why Data Literacy Matters
+## Why Data Literacy Matters
 
 Data is everywhere. It influences what shows up in our social media feeds, the polls and reports we see in the news, the ads targeted to us online, and even the medical decisions made about our health.  
 
@@ -34,7 +34,7 @@ These definitions highlight that data literacy is not about coding or building a
 
 ---
 
-### Data Literacy and Data Science: How They Connect
+## Data Literacy and Data Science: How They Connect
 
 It helps to distinguish between these terms.  
 
@@ -57,7 +57,7 @@ This series will support both:
 
 ---
 
-### Why Teach Data Literacy in Mathematics?
+## Why Teach Data Literacy in Mathematics?
 
 Bringing data literacy into math classrooms provides several benefits:  
 
@@ -70,7 +70,7 @@ Put simply, data literacy is a civic skill as well as a career skill. Students m
 
 ---
 
-### What It Looks Like in the Classroom
+## What It Looks Like in the Classroom
 
 Teachers do not need to overhaul everything at once. Data literacy can begin with small shifts:  
 
@@ -91,7 +91,7 @@ These steps make data tangible and show students that math is about making sense
   </fig>
 </div>
 
-### What’s Next
+## What’s Next
 
 This post is the foundation for a series on teaching data literacy and data science. In the coming months, I will share:  
 
