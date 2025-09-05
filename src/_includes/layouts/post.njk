@@ -30,45 +30,46 @@
     <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
       {{ content | safe }}
     </div>
-
-
-  </article>
-</main>
-
   </article>
 </main>
 
 <footer class="post-footer">
+  {# sharing helpers #}
+  {% set shareUrl = site.url + page.url %}
+  {% set engageText = engage or "What’s your take? Share your thoughts or start a discussion:" %}
+  {% set engageFlat = engageText | replace('\n',' ') %}
+
   {# CTA band (light gray) #}
   <section class="post-footer__cta">
     <div class="inner-wrapper post-footer__grid">
+
       <div class="subscribe">
-        <h3 class="u-underline">Get updates</h3>
+        <h2 class="u-underline">Get updates</h2>
         <p>Be first to know when new lessons and posts go live.</p>
         <div class="ml-embedded" data-form="XYeqGG"></div>
       </div>
 
-<div class="social-cta">
-  <h3 class="u-underline">Continue the conversation</h3>
-  <p>What’s your take? Share your thoughts or start a discussion:</p>
+      <div class="social-cta">
+        <h2 class="u-underline">Continue the conversation</h2>
+        <p class="lead"><strong>{{ engageText }}</strong></p>
+        <p class="meta">Let me know on X or LinkedIn.</p>
+        <p>
+          <a class="button"
+             href="https://twitter.com/intent/tweet?url={{ shareUrl | urlencode }}&text={{ engageFlat | urlencode }}"
+             target="_blank" rel="noopener">Discuss on X</a>
+        </p>
 
-  <p>
-    <a class="button"
-       href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ site.url }}{{ page.url }}"
-       target="_blank" rel="noopener">Discuss on X</a>
-  </p>
+        <p>
+          <a class="button"
+             href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl | urlencode }}"
+             target="_blank" rel="noopener">Share on LinkedIn</a>
+        </p>
+      </div>
 
-  <p>
-    <a class="button"
-       href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-       target="_blank" rel="noopener">Share on LinkedIn</a>
-  </p>
-</div>
-
-
+    </div>
   </section>
 
-  {# Meta: Posted under + Tags (left-aligned under the band) #}
+  {# Meta: Posted under + Tags #}
   <div class="inner-wrapper post-footer__meta-wrap">
     {% if primaryCategory %}
       <p class="post-footer__meta">

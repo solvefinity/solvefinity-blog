@@ -11,5 +11,7 @@
   "maxPostsPerPage": 5,
   "paymentPointer": "",
   "faviconPath": "/images/sf_favicon.ico",
-  "socialImage": "/images/social-default.png"
+  "socialImage": "/images/social-default.png",
+  "engageDefault": "What’s your take? Share your thoughts or start a discussion:"
+
 }

@@ -4,52 +4,68 @@
 
 {# Titles #}
 {% set siteTitle = site.name %}
-{% set pageTitle = metaTitle or (title + ' - ' + site.name) %}
+{% set ogTitle = metaTitle or (title and (title + ' - ' + site.name)) or site.name %}
 
-{# Descriptions (fallback to front-matter "description") #}
+{# Description #}
 {% set pageDesc = (metaDesc or description or site.description) | striptags | trim %}
 
-{# URL #}
+{# URL helpers #}
 {% set currentUrl = site.url + page.url %}
 
-{# Social image: prefer socialImage, else featuredImage #}
-{% set socialImg = socialImage or featuredImage %}
-
-{# Ensure og:image is ABSOLUTE (LinkedIn requirement) #}
-{% if socialImg %}
-  {% if socialImg[0] == '/' %}
-    {% set socialAbs = site.url + socialImg %}
-  {% else %}
-    {% set socialAbs = socialImg %}
-  {% endif %}
+{# Social image: prefer socialImage, else cover/hero, else default #}
+{% set ogPath = socialImage or cover or hero or '/images/og/default.jpg' %}
+{% if ogPath and ogPath[0] == '/' %}
+  {% set ogAbs = site.url + ogPath %}
+{% else %}
+  {% set ogAbs = ogPath %}
 {% endif %}
 
-<title>{{ pageTitle }}</title>
-<link rel="canonical" href="{{ currentUrl }}" />
+{# Is this a post? (path starts with /posts/) #}
+{% set isPost = page.url and page.url.indexOf('/posts/') == 0 %}
 
-<meta property="og:site_name" content="{{ siteTitle }}" />
-<meta property="og:title" content="{{ pageTitle }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ currentUrl }}" />
+<title>{{ ogTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}">
 
-{% if site.authorHandle %}
-  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
+{# Open Graph #}
+<meta property="og:site_name" content="{{ siteTitle }}">
+<meta property="og:title" content="{{ ogTitle }}">
+{% if isPost %}
+  <meta property="og:type" content="article">
+{% else %}
+  <meta property="og:type" content="website">
 {% endif %}
+<meta property="og:url" content="{{ currentUrl }}">
 
 {% if pageDesc %}
-  <meta name="description" content="{{ pageDesc }}" />
-  <meta name="twitter:description" content="{{ pageDesc }}" />
-  <meta property="og:description" content="{{ pageDesc }}" />
+  <meta name="description" content="{{ pageDesc }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta name="twitter:description" content="{{ pageDesc }}">
 {% endif %}
 
-{% if socialAbs %}
-  <meta property="og:image" content="{{ socialAbs }}" />
-  <meta name="twitter:image" content="{{ socialAbs }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+{% if ogAbs %}
+  <meta property="og:image" content="{{ ogAbs }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ pageDesc or site.description }}">
+  <meta name="twitter:image" content="{{ ogAbs }}">
 {% endif %}
 
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image">
+{% if site.authorHandle or site.twitter %}
+  <meta name="twitter:site" content="@{{ (site.authorHandle or site.twitter) | replace('@','') }}">
+{% endif %}
+<meta name="twitter:title" content="{{ ogTitle }}">
+
+{# Article extras (only on posts) #}
+{% if isPost %}
+  {% if date %}<meta property="article:published_time" content="{{ date | w3DateFilter }}">{% endif %}
+  {% if page.dateUpdated %}<meta property="article:modified_time" content="{{ page.dateUpdated | w3DateFilter }}">{% endif %}
+  <meta property="article:author" content="Jennifer Mullinix">
+{% endif %}
+
+{# Web Monetization (optional) #}
 {% if site.paymentPointer %}
-  <meta name="monetization" content="{{ site.paymentPointer }}" />
+  <meta name="monetization" content="{{ site.paymentPointer }}">
 {% endif %}
 
