@@ -34,10 +34,11 @@
 </main>
 
 <footer class="post-footer">
-  {# sharing helpers #}
-  {% set shareUrl = site.url + page.url %}
-  {% set engageText = engage or "What’s your take? Share your thoughts or start a discussion:" %}
-  {% set engageFlat = engageText | replace('\n',' ') %}
+{% set shareUrl    = site.url + page.url %}
+{% set defaultQ    = "What's your take?" %}
+{% set engageText  = engage or defaultQ %}           {# shown on page #}
+{% set tweetText   = engage or defaultQ %}           {# used in X link #}
+
 
   {# CTA band (light gray) #}
   <section class="post-footer__cta">
@@ -55,8 +56,9 @@
         <p class="meta">Let me know on X or LinkedIn.</p>
         <p>
           <a class="button"
-             href="https://twitter.com/intent/tweet?url={{ shareUrl | urlencode }}&text={{ engageFlat | urlencode }}"
-             target="_blank" rel="noopener">Discuss on X</a>
+           href="https://twitter.com/intent/tweet?url={{ shareUrl | urlencode }}&text={{ (tweetText | replace('\n',' ')) | urlencode }}"
+           target="_blank" rel="noopener">Discuss on X</a>
+
         </p>
 
         <p>
