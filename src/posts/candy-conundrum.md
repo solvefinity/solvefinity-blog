@@ -11,6 +11,7 @@ tags:
   - modeling
   - estimation
   - problem-solving
+  - resources
 cardTitle: "The Candy Conundrum"
 cover: /images/blog/candy-conundrum.webp
 permalink: /posts/candy-conundrum/
@@ -36,7 +37,7 @@ In this *Math Is Messy* task, students reason about how many candies might come 
 **⏱️ Time:** 30–45 minutes  
 **Skills:** Estimation • Ratios & Proportions • Modeling • Reasoning  
 
-[⬇️ **Download the Student Handout (PDF)**](/downloads/candy-conundrum-handout.pdf)
+[⬇️ **Download the Student Handout (PDF)**](/downloads/candy-conundrum-handout.pdf){target="_blank" rel="noopener noreferrer"}
 
 *(Teacher Guide coming soon!)*
 
