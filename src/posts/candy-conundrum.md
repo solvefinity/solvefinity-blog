@@ -36,7 +36,7 @@ In this *Math Is Messy* task, students reason about how many candies might come 
 **⏱️ Time:** 30–45 minutes  
 **Skills:** Estimation • Ratios & Proportions • Modeling • Reasoning  
 
-[⬇️ **Download the Student Handout (PDF)**](/assets/downloads/candy-conundrum-handout.pdf)
+[⬇️ **Download the Student Handout (PDF)**](/downloads/candy-conundrum-handout.pdf)
 
 *(Teacher Guide coming soon!)*
 
