@@ -37,6 +37,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
   config.addPassthroughCopy('src/downloads');
+  config.addPassthroughCopy({'src/_headers': '_headers'});
 
 // Generate sitemap.xml
   config.addPlugin(sitemap, {
