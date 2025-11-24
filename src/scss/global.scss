@@ -1734,3 +1734,39 @@ a.button:visited { color: #fff; }
 
 /* Small screens: allow horizontal scroll nicely */
 .sf-table-wrap { -webkit-overflow-scrolling: touch; }
+
+.sf-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Allow copying from code blocks */
+pre,
+pre code,
+code {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.copy-code-button:hover {
+  opacity: 1;
+}
