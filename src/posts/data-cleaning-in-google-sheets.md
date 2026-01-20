@@ -5,7 +5,7 @@ date: 2025-11-09
 metaTitle: "Google Sheets Data Cleaning Tutorial for High School Data Science Teachers"
 metaDesc: "A beginner-friendly walkthrough of cleaning messy data in Google Sheets, with free downloads, student handouts, and a full teacher bundle."
 summary: "A complete Google Sheets data cleaning lesson — perfect for teachers rolling out high school data science, YouCubed, or CODAP-based courses."
-primaryCategory: data-science
+primaryCategory: data-science-modeling
 tags:
   - data-science
   - math-education
@@ -184,6 +184,8 @@ Isabella,"Printer ",203 cm,Right,Underhand
 Mateo,NoteBook,176,Left,Overhand
 Kai,Printer,190cm,Right,Overhand
 ```
+
+> **Pro Tip:** If the data pastes into a single column, select the data, go to the **Data** menu, and choose **Split text to columns**. Google Sheets usually detects the commas automatically!
 ---
 
 ### 📁 XLSX Version

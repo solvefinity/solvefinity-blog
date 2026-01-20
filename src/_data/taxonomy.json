@@ -1,7 +1,20 @@
 {
   "categories": [
-    { "slug": "math-education", "label": "Math Education" },
-    { "slug": "data-science-modeling", "label": "Data Science & Modeling" },
-    { "slug": "technology-ai", "label": "Technology & AI" }
+    {
+      "slug": "math-education",
+      "label": "Math Education"
+    },
+    {
+      "slug": "data-science-modeling",
+      "label": "Data Science & Modeling"
+    },
+    {
+      "slug": "technology-ai",
+      "label": "Technology & AI"
+    },
+    {
+      "slug": "data-science",
+      "label": "Data Science"
+    }
   ]
 }
