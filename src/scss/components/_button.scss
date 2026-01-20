@@ -1,31 +1,84 @@
+/* ================================
+   Solvefinity Buttons
+   ================================ */
+
 .button {
   display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
   border: none;
-  background-color: var(--color-action-bg);
-  color: var(--color-action-text);
-  padding: get-size(300) get-size('base');
-  line-height: 1;
-  margin: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to bottom, #128091, #095166);
   text-decoration: none;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  line-height: 1;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
+  background: linear-gradient(to bottom, #095166, #128091);
+  transform: translateY(-1px);
   filter: brightness(1.2);
 }
 
-.button:focus:hover {
+.button:focus {
   outline: none;
+  box-shadow: 0 0 0 3px rgba(18, 128, 145, 0.5);
 }
 
-.button:focus:not(:hover) {
-  outline: 1px solid var(--color-action-text);
-  outline-offset: -4px;
+.button-secondary {
+  background: linear-gradient(to bottom, #4E5B6D, #00223A);
+  color: white;
 }
 
-.button:active {
-  transform: scale(0.99);
+.button-secondary:hover {
+  background: linear-gradient(to bottom, #00223A, #4E5B6D);
+}
+
+.button-ghost {
+  background: transparent;
+  color: #128091;
+  border: 2px solid #128091;
+}
+
+.button-ghost:hover {
+  background: rgba(18, 128, 145, 0.1);
+  color: #128091;
+}
+
+.button-ghost-white {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.button-ghost-white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Ensure visual button links are white text */
+a.button,
+a.button:link,
+a.button:visited,
+button.button {
+  color: #fff;
+  text-decoration: none;
 }
